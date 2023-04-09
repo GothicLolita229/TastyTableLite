@@ -31,24 +31,36 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TastyTableForm));
 			this.panelFooterContainer = new System.Windows.Forms.Panel();
 			this.panelHeaderContainer = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
+			this.WelcomeLabel = new System.Windows.Forms.Label();
+			this.TastyTableLabel = new System.Windows.Forms.Label();
 			this.LogoPicture = new System.Windows.Forms.PictureBox();
 			this.panelButtonContainer = new System.Windows.Forms.Panel();
-			this.HomeButton = new System.Windows.Forms.Button();
-			this.RecipeBookButton = new System.Windows.Forms.Button();
-			this.AddRecipeButton = new System.Windows.Forms.Button();
-			this.AboutButton = new System.Windows.Forms.Button();
-			this.WelcomeLabel = new System.Windows.Forms.Label();
 			this.SearchButton = new System.Windows.Forms.Button();
+			this.AboutButton = new System.Windows.Forms.Button();
+			this.AddRecipeButton = new System.Windows.Forms.Button();
+			this.RecipeBookButton = new System.Windows.Forms.Button();
+			this.HomeButton = new System.Windows.Forms.Button();
+			this.userInfoPanel = new System.Windows.Forms.Panel();
+			this.searchUCF = new WinUI.SearchUC();
+			this.aboutUCF = new WinUI.AboutUC();
+			this.addRecipeUCF = new WinUI.AddRecipeUC();
+			this.recipeBookUCF = new WinUI.RecipeBookUC();
+			this.homeUCF = new WinUI.HomeUC();
+			this.footerLabel = new System.Windows.Forms.Label();
+			this.userNameLabel = new System.Windows.Forms.Label();
+			this.userInfoLabel = new System.Windows.Forms.Label();
+			this.panelFooterContainer.SuspendLayout();
 			this.panelHeaderContainer.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
 			this.panelButtonContainer.SuspendLayout();
+			this.userInfoPanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panelFooterContainer
 			// 
 			this.panelFooterContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
 			this.panelFooterContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panelFooterContainer.Controls.Add(this.footerLabel);
 			this.panelFooterContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panelFooterContainer.Location = new System.Drawing.Point(0, 880);
 			this.panelFooterContainer.Name = "panelFooterContainer";
@@ -60,7 +72,7 @@
 			this.panelHeaderContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.panelHeaderContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panelHeaderContainer.Controls.Add(this.WelcomeLabel);
-			this.panelHeaderContainer.Controls.Add(this.label1);
+			this.panelHeaderContainer.Controls.Add(this.TastyTableLabel);
 			this.panelHeaderContainer.Controls.Add(this.LogoPicture);
 			this.panelHeaderContainer.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panelHeaderContainer.Location = new System.Drawing.Point(0, 0);
@@ -68,15 +80,25 @@
 			this.panelHeaderContainer.Size = new System.Drawing.Size(1736, 108);
 			this.panelHeaderContainer.TabIndex = 2;
 			// 
-			// label1
+			// WelcomeLabel
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(108, 19);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(243, 65);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Tasty Table";
+			this.WelcomeLabel.AutoSize = true;
+			this.WelcomeLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.WelcomeLabel.Location = new System.Drawing.Point(1493, 33);
+			this.WelcomeLabel.Name = "WelcomeLabel";
+			this.WelcomeLabel.Size = new System.Drawing.Size(126, 40);
+			this.WelcomeLabel.TabIndex = 2;
+			this.WelcomeLabel.Text = "Welcome!";
+			// 
+			// TastyTableLabel
+			// 
+			this.TastyTableLabel.AutoSize = true;
+			this.TastyTableLabel.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.TastyTableLabel.Location = new System.Drawing.Point(108, 19);
+			this.TastyTableLabel.Name = "TastyTableLabel";
+			this.TastyTableLabel.Size = new System.Drawing.Size(243, 65);
+			this.TastyTableLabel.TabIndex = 1;
+			this.TastyTableLabel.Text = "Tasty Table";
 			// 
 			// LogoPicture
 			// 
@@ -104,41 +126,18 @@
 			this.panelButtonContainer.Size = new System.Drawing.Size(1736, 62);
 			this.panelButtonContainer.TabIndex = 3;
 			// 
-			// HomeButton
+			// SearchButton
 			// 
-			this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
-			this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.HomeButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.HomeButton.Location = new System.Drawing.Point(0, 0);
-			this.HomeButton.Name = "HomeButton";
-			this.HomeButton.Size = new System.Drawing.Size(209, 62);
-			this.HomeButton.TabIndex = 0;
-			this.HomeButton.Text = "Home";
-			this.HomeButton.UseVisualStyleBackColor = false;
-			// 
-			// RecipeBookButton
-			// 
-			this.RecipeBookButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
-			this.RecipeBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.RecipeBookButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
-			this.RecipeBookButton.Location = new System.Drawing.Point(207, 0);
-			this.RecipeBookButton.Name = "RecipeBookButton";
-			this.RecipeBookButton.Size = new System.Drawing.Size(209, 62);
-			this.RecipeBookButton.TabIndex = 1;
-			this.RecipeBookButton.Text = "Recipe Book";
-			this.RecipeBookButton.UseVisualStyleBackColor = false;
-			// 
-			// AddRecipeButton
-			// 
-			this.AddRecipeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
-			this.AddRecipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.AddRecipeButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
-			this.AddRecipeButton.Location = new System.Drawing.Point(414, 0);
-			this.AddRecipeButton.Name = "AddRecipeButton";
-			this.AddRecipeButton.Size = new System.Drawing.Size(209, 62);
-			this.AddRecipeButton.TabIndex = 2;
-			this.AddRecipeButton.Text = "Add Recipe";
-			this.AddRecipeButton.UseVisualStyleBackColor = false;
+			this.SearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
+			this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.SearchButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
+			this.SearchButton.Location = new System.Drawing.Point(830, -2);
+			this.SearchButton.Name = "SearchButton";
+			this.SearchButton.Size = new System.Drawing.Size(209, 62);
+			this.SearchButton.TabIndex = 4;
+			this.SearchButton.Text = "Search";
+			this.SearchButton.UseVisualStyleBackColor = false;
+			this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
 			// 
 			// AboutButton
 			// 
@@ -151,28 +150,121 @@
 			this.AboutButton.TabIndex = 3;
 			this.AboutButton.Text = "About Us";
 			this.AboutButton.UseVisualStyleBackColor = false;
+			this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
 			// 
-			// WelcomeLabel
+			// AddRecipeButton
 			// 
-			this.WelcomeLabel.AutoSize = true;
-			this.WelcomeLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.WelcomeLabel.Location = new System.Drawing.Point(1493, 33);
-			this.WelcomeLabel.Name = "WelcomeLabel";
-			this.WelcomeLabel.Size = new System.Drawing.Size(126, 40);
-			this.WelcomeLabel.TabIndex = 2;
-			this.WelcomeLabel.Text = "Welcome!";
+			this.AddRecipeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
+			this.AddRecipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.AddRecipeButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
+			this.AddRecipeButton.Location = new System.Drawing.Point(414, 0);
+			this.AddRecipeButton.Name = "AddRecipeButton";
+			this.AddRecipeButton.Size = new System.Drawing.Size(209, 62);
+			this.AddRecipeButton.TabIndex = 2;
+			this.AddRecipeButton.Text = "Add Recipe";
+			this.AddRecipeButton.UseVisualStyleBackColor = false;
+			this.AddRecipeButton.Click += new System.EventHandler(this.AddRecipeButton_Click);
 			// 
-			// SearchButton
+			// RecipeBookButton
 			// 
-			this.SearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
-			this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.SearchButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
-			this.SearchButton.Location = new System.Drawing.Point(830, -2);
-			this.SearchButton.Name = "SearchButton";
-			this.SearchButton.Size = new System.Drawing.Size(209, 62);
-			this.SearchButton.TabIndex = 4;
-			this.SearchButton.Text = "Search";
-			this.SearchButton.UseVisualStyleBackColor = false;
+			this.RecipeBookButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
+			this.RecipeBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.RecipeBookButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
+			this.RecipeBookButton.Location = new System.Drawing.Point(207, 0);
+			this.RecipeBookButton.Name = "RecipeBookButton";
+			this.RecipeBookButton.Size = new System.Drawing.Size(209, 62);
+			this.RecipeBookButton.TabIndex = 1;
+			this.RecipeBookButton.Text = "Recipe Book";
+			this.RecipeBookButton.UseVisualStyleBackColor = false;
+			this.RecipeBookButton.Click += new System.EventHandler(this.RecipeBookButton_Click);
+			// 
+			// HomeButton
+			// 
+			this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
+			this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.HomeButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.HomeButton.Location = new System.Drawing.Point(0, 0);
+			this.HomeButton.Name = "HomeButton";
+			this.HomeButton.Size = new System.Drawing.Size(209, 62);
+			this.HomeButton.TabIndex = 0;
+			this.HomeButton.Text = "Home";
+			this.HomeButton.UseVisualStyleBackColor = false;
+			this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+			// 
+			// userInfoPanel
+			// 
+			this.userInfoPanel.Controls.Add(this.userInfoLabel);
+			this.userInfoPanel.Controls.Add(this.userNameLabel);
+			this.userInfoPanel.Dock = System.Windows.Forms.DockStyle.Right;
+			this.userInfoPanel.Location = new System.Drawing.Point(1497, 170);
+			this.userInfoPanel.Name = "userInfoPanel";
+			this.userInfoPanel.Size = new System.Drawing.Size(239, 710);
+			this.userInfoPanel.TabIndex = 4;
+			// 
+			// searchUCF
+			// 
+			this.searchUCF.Location = new System.Drawing.Point(209, 170);
+			this.searchUCF.Name = "searchUCF";
+			this.searchUCF.Size = new System.Drawing.Size(1282, 710);
+			this.searchUCF.TabIndex = 9;
+			// 
+			// aboutUCF
+			// 
+			this.aboutUCF.Location = new System.Drawing.Point(209, 170);
+			this.aboutUCF.Name = "aboutUCF";
+			this.aboutUCF.Size = new System.Drawing.Size(1282, 707);
+			this.aboutUCF.TabIndex = 8;
+			// 
+			// addRecipeUCF
+			// 
+			this.addRecipeUCF.Location = new System.Drawing.Point(209, 170);
+			this.addRecipeUCF.Name = "addRecipeUCF";
+			this.addRecipeUCF.Size = new System.Drawing.Size(1282, 710);
+			this.addRecipeUCF.TabIndex = 7;
+			// 
+			// recipeBookUCF
+			// 
+			this.recipeBookUCF.Location = new System.Drawing.Point(209, 170);
+			this.recipeBookUCF.Name = "recipeBookUCF";
+			this.recipeBookUCF.Size = new System.Drawing.Size(1282, 710);
+			this.recipeBookUCF.TabIndex = 6;
+			// 
+			// homeUCF
+			// 
+			this.homeUCF.Location = new System.Drawing.Point(217, 170);
+			this.homeUCF.Name = "homeUCF";
+			this.homeUCF.Size = new System.Drawing.Size(1274, 710);
+			this.homeUCF.TabIndex = 5;
+			// 
+			// footerLabel
+			// 
+			this.footerLabel.AutoSize = true;
+			this.footerLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.footerLabel.Location = new System.Drawing.Point(804, 5);
+			this.footerLabel.Name = "footerLabel";
+			this.footerLabel.Size = new System.Drawing.Size(248, 50);
+			this.footerLabel.TabIndex = 3;
+			this.footerLabel.Text = "Tasty Table Inc.";
+			// 
+			// userNameLabel
+			// 
+			this.userNameLabel.AutoSize = true;
+			this.userNameLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.userNameLabel.Location = new System.Drawing.Point(46, 19);
+			this.userNameLabel.Name = "userNameLabel";
+			this.userNameLabel.Size = new System.Drawing.Size(145, 40);
+			this.userNameLabel.TabIndex = 3;
+			this.userNameLabel.Text = "User Name";
+			// 
+			// userInfoLabel
+			// 
+			this.userInfoLabel.AutoSize = true;
+			this.userInfoLabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.userInfoLabel.Location = new System.Drawing.Point(22, 86);
+			this.userInfoLabel.Name = "userInfoLabel";
+			this.userInfoLabel.Size = new System.Drawing.Size(196, 35);
+			this.userInfoLabel.TabIndex = 4;
+			this.userInfoLabel.Text = "Number of recipes";
 			// 
 			// TastyTableForm
 			// 
@@ -180,6 +272,12 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(1736, 933);
+			this.Controls.Add(this.searchUCF);
+			this.Controls.Add(this.aboutUCF);
+			this.Controls.Add(this.addRecipeUCF);
+			this.Controls.Add(this.recipeBookUCF);
+			this.Controls.Add(this.homeUCF);
+			this.Controls.Add(this.userInfoPanel);
 			this.Controls.Add(this.panelButtonContainer);
 			this.Controls.Add(this.panelHeaderContainer);
 			this.Controls.Add(this.panelFooterContainer);
@@ -187,10 +285,15 @@
 			this.Name = "TastyTableForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Tasty Table Lite";
+			this.Load += new System.EventHandler(this.TastyTableForm_Load);
+			this.panelFooterContainer.ResumeLayout(false);
+			this.panelFooterContainer.PerformLayout();
 			this.panelHeaderContainer.ResumeLayout(false);
 			this.panelHeaderContainer.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).EndInit();
 			this.panelButtonContainer.ResumeLayout(false);
+			this.userInfoPanel.ResumeLayout(false);
+			this.userInfoPanel.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -199,7 +302,7 @@
 
 		private System.Windows.Forms.Panel panelFooterContainer;
 		private System.Windows.Forms.Panel panelHeaderContainer;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label TastyTableLabel;
 		private System.Windows.Forms.PictureBox LogoPicture;
 		private System.Windows.Forms.Panel panelButtonContainer;
 		private System.Windows.Forms.Button AboutButton;
@@ -208,6 +311,15 @@
 		private System.Windows.Forms.Button HomeButton;
 		private System.Windows.Forms.Label WelcomeLabel;
 		private System.Windows.Forms.Button SearchButton;
+		private System.Windows.Forms.Panel userInfoPanel;
+		private HomeUC homeUCF;
+		private RecipeBookUC recipeBookUCF;
+		private AddRecipeUC addRecipeUCF;
+		private AboutUC aboutUCF;
+		private SearchUC searchUCF;
+		private System.Windows.Forms.Label footerLabel;
+		private System.Windows.Forms.Label userInfoLabel;
+		private System.Windows.Forms.Label userNameLabel;
 	}
 }
 

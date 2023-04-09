@@ -1,0 +1,16 @@
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\WinUI.exe.config
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\WinUI.exe
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\WinUI.pdb
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.AssemblyReference.cache
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.SuggestedBindingRedirects.cache
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.AboutUC.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.AddRecipeUC.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.HomeUC.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.RecipeBookUC.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.SearchUC.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.TastyTableForm.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.Properties.Resources.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.GenerateResource.cache
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CoreCompileInputs.cache
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.exe
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.pdb
