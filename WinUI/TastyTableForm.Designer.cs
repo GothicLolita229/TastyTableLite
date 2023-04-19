@@ -30,6 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TastyTableForm));
 			this.panelFooterContainer = new System.Windows.Forms.Panel();
+			this.footerLabel = new System.Windows.Forms.Label();
 			this.panelHeaderContainer = new System.Windows.Forms.Panel();
 			this.WelcomeLabel = new System.Windows.Forms.Label();
 			this.TastyTableLabel = new System.Windows.Forms.Label();
@@ -41,14 +42,13 @@
 			this.RecipeBookButton = new System.Windows.Forms.Button();
 			this.HomeButton = new System.Windows.Forms.Button();
 			this.userInfoPanel = new System.Windows.Forms.Panel();
+			this.userInfoLabel = new System.Windows.Forms.Label();
+			this.userNameLabel = new System.Windows.Forms.Label();
 			this.searchUCF = new WinUI.SearchUC();
 			this.aboutUCF = new WinUI.AboutUC();
 			this.addRecipeUCF = new WinUI.AddRecipeUC();
 			this.recipeBookUCF = new WinUI.RecipeBookUC();
 			this.homeUCF = new WinUI.HomeUC();
-			this.footerLabel = new System.Windows.Forms.Label();
-			this.userNameLabel = new System.Windows.Forms.Label();
-			this.userInfoLabel = new System.Windows.Forms.Label();
 			this.panelFooterContainer.SuspendLayout();
 			this.panelHeaderContainer.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
@@ -66,6 +66,16 @@
 			this.panelFooterContainer.Name = "panelFooterContainer";
 			this.panelFooterContainer.Size = new System.Drawing.Size(1736, 53);
 			this.panelFooterContainer.TabIndex = 1;
+			// 
+			// footerLabel
+			// 
+			this.footerLabel.AutoSize = true;
+			this.footerLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.footerLabel.Location = new System.Drawing.Point(804, 5);
+			this.footerLabel.Name = "footerLabel";
+			this.footerLabel.Size = new System.Drawing.Size(198, 40);
+			this.footerLabel.TabIndex = 3;
+			this.footerLabel.Text = "Tasty Table Inc.";
 			// 
 			// panelHeaderContainer
 			// 
@@ -201,8 +211,29 @@
 			this.userInfoPanel.Size = new System.Drawing.Size(239, 710);
 			this.userInfoPanel.TabIndex = 4;
 			// 
+			// userInfoLabel
+			// 
+			this.userInfoLabel.AutoSize = true;
+			this.userInfoLabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.userInfoLabel.Location = new System.Drawing.Point(22, 86);
+			this.userInfoLabel.Name = "userInfoLabel";
+			this.userInfoLabel.Size = new System.Drawing.Size(196, 35);
+			this.userInfoLabel.TabIndex = 4;
+			this.userInfoLabel.Text = "Number of recipes";
+			// 
+			// userNameLabel
+			// 
+			this.userNameLabel.AutoSize = true;
+			this.userNameLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.userNameLabel.Location = new System.Drawing.Point(46, 19);
+			this.userNameLabel.Name = "userNameLabel";
+			this.userNameLabel.Size = new System.Drawing.Size(145, 40);
+			this.userNameLabel.TabIndex = 3;
+			this.userNameLabel.Text = "User Name";
+			// 
 			// searchUCF
 			// 
+			this.searchUCF.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.searchUCF.Location = new System.Drawing.Point(209, 170);
 			this.searchUCF.Name = "searchUCF";
 			this.searchUCF.Size = new System.Drawing.Size(1282, 710);
@@ -235,36 +266,6 @@
 			this.homeUCF.Name = "homeUCF";
 			this.homeUCF.Size = new System.Drawing.Size(1274, 710);
 			this.homeUCF.TabIndex = 5;
-			// 
-			// footerLabel
-			// 
-			this.footerLabel.AutoSize = true;
-			this.footerLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.footerLabel.Location = new System.Drawing.Point(804, 5);
-			this.footerLabel.Name = "footerLabel";
-			this.footerLabel.Size = new System.Drawing.Size(248, 50);
-			this.footerLabel.TabIndex = 3;
-			this.footerLabel.Text = "Tasty Table Inc.";
-			// 
-			// userNameLabel
-			// 
-			this.userNameLabel.AutoSize = true;
-			this.userNameLabel.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.userNameLabel.Location = new System.Drawing.Point(46, 19);
-			this.userNameLabel.Name = "userNameLabel";
-			this.userNameLabel.Size = new System.Drawing.Size(145, 40);
-			this.userNameLabel.TabIndex = 3;
-			this.userNameLabel.Text = "User Name";
-			// 
-			// userInfoLabel
-			// 
-			this.userInfoLabel.AutoSize = true;
-			this.userInfoLabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.userInfoLabel.Location = new System.Drawing.Point(22, 86);
-			this.userInfoLabel.Name = "userInfoLabel";
-			this.userInfoLabel.Size = new System.Drawing.Size(196, 35);
-			this.userInfoLabel.TabIndex = 4;
-			this.userInfoLabel.Text = "Number of recipes";
 			// 
 			// TastyTableForm
 			// 

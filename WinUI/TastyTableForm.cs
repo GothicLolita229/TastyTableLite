@@ -21,6 +21,7 @@ namespace WinUI
 		{
 			// Hide All User Controls except the home page
 			// TODO Maybe make this the login page, either that or have an overlay login
+			// Background color is 255, 230, 204
 			recipeBookUCF.Hide();
 			addRecipeUCF.Hide();
 			aboutUCF.Hide();

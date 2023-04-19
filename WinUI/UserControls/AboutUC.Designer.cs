@@ -37,7 +37,7 @@
 			this.AboutUsUCLabel.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold);
 			this.AboutUsUCLabel.Location = new System.Drawing.Point(436, 373);
 			this.AboutUsUCLabel.Name = "AboutUsUCLabel";
-			this.AboutUsUCLabel.Size = new System.Drawing.Size(249, 81);
+			this.AboutUsUCLabel.Size = new System.Drawing.Size(199, 65);
 			this.AboutUsUCLabel.TabIndex = 3;
 			this.AboutUsUCLabel.Text = "About Us";
 			// 
@@ -45,6 +45,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.Controls.Add(this.AboutUsUCLabel);
 			this.Name = "AboutUC";
 			this.Size = new System.Drawing.Size(956, 742);

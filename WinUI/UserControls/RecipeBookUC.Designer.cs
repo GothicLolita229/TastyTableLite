@@ -37,7 +37,7 @@
 			this.RecipeBookUCLabel.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold);
 			this.RecipeBookUCLabel.Location = new System.Drawing.Point(338, 315);
 			this.RecipeBookUCLabel.Name = "RecipeBookUCLabel";
-			this.RecipeBookUCLabel.Size = new System.Drawing.Size(316, 81);
+			this.RecipeBookUCLabel.Size = new System.Drawing.Size(253, 65);
 			this.RecipeBookUCLabel.TabIndex = 1;
 			this.RecipeBookUCLabel.Text = "Recipe Book";
 			// 
@@ -45,6 +45,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.Controls.Add(this.RecipeBookUCLabel);
 			this.Name = "RecipeBookUC";
 			this.Size = new System.Drawing.Size(956, 742);

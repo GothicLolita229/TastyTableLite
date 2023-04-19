@@ -37,7 +37,7 @@
 			this.HomeUCLabel.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold);
 			this.HomeUCLabel.Location = new System.Drawing.Point(382, 328);
 			this.HomeUCLabel.Name = "HomeUCLabel";
-			this.HomeUCLabel.Size = new System.Drawing.Size(169, 81);
+			this.HomeUCLabel.Size = new System.Drawing.Size(135, 65);
 			this.HomeUCLabel.TabIndex = 0;
 			this.HomeUCLabel.Text = "Home";
 			// 
@@ -45,6 +45,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.Controls.Add(this.HomeUCLabel);
 			this.Name = "HomeUC";
 			this.Size = new System.Drawing.Size(955, 741);
