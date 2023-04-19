@@ -15,6 +15,9 @@ namespace WinUI
 		public AboutUC()
 		{
 			InitializeComponent();
+			
 		}
+
+
 	}
 }

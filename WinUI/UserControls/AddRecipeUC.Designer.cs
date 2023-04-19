@@ -33,9 +33,10 @@
 			// 
 			// AddRecipeUCLabel
 			// 
+			this.AddRecipeUCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.AddRecipeUCLabel.AutoSize = true;
 			this.AddRecipeUCLabel.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold);
-			this.AddRecipeUCLabel.Location = new System.Drawing.Point(327, 312);
+			this.AddRecipeUCLabel.Location = new System.Drawing.Point(339, 0);
 			this.AddRecipeUCLabel.Name = "AddRecipeUCLabel";
 			this.AddRecipeUCLabel.Size = new System.Drawing.Size(239, 65);
 			this.AddRecipeUCLabel.TabIndex = 2;
