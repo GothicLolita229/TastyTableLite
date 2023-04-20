@@ -14,3 +14,20 @@ D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinU
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CoreCompileInputs.cache
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.exe
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.pdb
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\WinUI.exe.config
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\WinUI.exe
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\WinUI.pdb
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.AssemblyReference.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.LogInForm.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.AboutUC.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.AddRecipeUC.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.HomeUC.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.RecipeBookUC.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.SearchUC.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.TastyTableForm.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.Properties.Resources.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.GenerateResource.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CoreCompileInputs.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.exe
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.pdb
