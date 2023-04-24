@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace TastyTableClassLibrary
 {
-	public class Ingredient
+	public class Recipe
 	{
-		public Ingredient() { }
+		public Recipe() { }
 
 		public int ID { get; set; }
 		public string Name { get; set; }
-		public double Quantity { get; set; }
-		public string Unit { get; set; }
+		public int TempNum { get; set; }
+		public string TempChar { get; set; }
 	}
 }

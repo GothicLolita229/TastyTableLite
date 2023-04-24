@@ -10,7 +10,7 @@ namespace TastyTableClassLibrary
 	public class User
 	{
 		public User() { }
-		public int Id { get; set; }
+		public int ID { get; set; }
 		public string FName { get; set; }
 		public string LName { get; set; }
 		public string HashPass { get; set; }
@@ -18,6 +18,8 @@ namespace TastyTableClassLibrary
 
 		public static string EncryptPassword(string password)
 		{
+			// No need to reverse the hash, we just store the salt, use the same salt when hashing attempted password
+			// and then compare the two already hashed passwords
 			using (SHA256 sha256 = SHA256.Create())
 			{
 				byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
