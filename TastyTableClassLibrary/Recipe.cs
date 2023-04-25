@@ -14,5 +14,9 @@ namespace TastyTableClassLibrary
 		public string Name { get; set; }
 		public int TempNum { get; set; }
 		public string TempChar { get; set; }
+
+		// We'll get these VV from the bridging table's reference and sort them out that way
+		public List<Ingredient> Ingredients { get; set;}
+		public List<Instruction> Instructions { get; set;}
 	}
 }

@@ -11,6 +11,7 @@ namespace TastyTableClassLibrary
 	{
 		public User() { }
 		public int ID { get; set; }
+		public string Username { get; set; }
 		public string FName { get; set; }
 		public string LName { get; set; }
 		public string HashPass { get; set; }
