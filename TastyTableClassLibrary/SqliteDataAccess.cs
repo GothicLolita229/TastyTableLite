@@ -24,7 +24,7 @@ namespace TastyTableClassLibrary
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				cnn.Execute("insert into UserLogin (FName, LName) values (@FName, @LName)", user);
+				cnn.Execute("insert into UserLogin (FName, LName, HashPass, Salt) values (@FName, @LName, @HashPass, @Salt)", user);
 			}
 		} 
 
