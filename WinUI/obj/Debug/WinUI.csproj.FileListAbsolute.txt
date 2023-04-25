@@ -31,3 +31,12 @@ C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.c
 C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CoreCompileInputs.cache
 C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.exe
 C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.pdb
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\TastyTableDB.db
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\System.Data.SQLite.dll
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\TastyTableClassLibrary.dll
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\Dapper.dll
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\TastyTableClassLibrary.pdb
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\System.Data.SQLite.xml
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\Dapper.xml
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.LogInForm.resources
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CopyComplete

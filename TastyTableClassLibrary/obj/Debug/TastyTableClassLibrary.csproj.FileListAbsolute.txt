@@ -1,0 +1,11 @@
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\bin\Debug\TastyTableClassLibrary.dll
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\bin\Debug\TastyTableClassLibrary.pdb
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\bin\Debug\Dapper.dll
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\bin\Debug\System.Data.SQLite.dll
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\bin\Debug\Dapper.xml
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\bin\Debug\System.Data.SQLite.xml
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.csproj.AssemblyReference.cache
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.csproj.CoreCompileInputs.cache
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.csproj.CopyComplete
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.dll
+D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.pdb
