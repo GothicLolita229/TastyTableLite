@@ -25,6 +25,32 @@ namespace WinUI
             User user = new User();
             string username = usernametxt.Text;
             user = SqliteDataAccess.LoadUser(username);
+
+            // check for password/if user even exists
+
+            if (user == null)
+            {
+                MessageBox.Show("Invalid username or password! Try again or register for an account!");
+            }
+            else
+            {
+                string attemptedHashPass = User.EncryptPassword(txtPassword.Text, user.Salt);
+                if (attemptedHashPass == user.HashPass)
+                {
+                    MessageBox.Show("You've successfully logged in, welcome!");
+                }    
+                else
+                {
+                    MessageBox.Show("Invalid username or password! Try again or register for an account!2");
+                }
+            }
+
+
+        }
+
+        private void exitLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

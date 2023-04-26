@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.loginButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.exitLabel = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -97,16 +98,17 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Clear Fields";
             // 
-            // label3
+            // exitLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label3.Location = new System.Drawing.Point(137, 411);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Exit";
+            this.exitLabel.AutoSize = true;
+            this.exitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitLabel.ForeColor = System.Drawing.Color.Goldenrod;
+            this.exitLabel.Location = new System.Drawing.Point(137, 411);
+            this.exitLabel.Name = "exitLabel";
+            this.exitLabel.Size = new System.Drawing.Size(32, 16);
+            this.exitLabel.TabIndex = 5;
+            this.exitLabel.Text = "Exit";
+            this.exitLabel.Click += new System.EventHandler(this.exitLabel_Click);
             // 
             // txtPassword
             // 
@@ -121,7 +123,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::WinUI.Properties.Resources.forschool2;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(32, 278);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
@@ -131,7 +133,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::WinUI.Properties.Resources.forschool;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(32, 213);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
@@ -168,7 +170,7 @@
             this.ClientSize = new System.Drawing.Size(292, 447);
             this.Controls.Add(this.usernametxt);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.exitLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.panel2);
@@ -199,7 +201,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label exitLabel;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox usernametxt;
     }

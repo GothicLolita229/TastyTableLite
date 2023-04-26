@@ -34,7 +34,7 @@ namespace WinUI
 
         private void exitLabel_Click(object sender, EventArgs e)
         {
-          
+            this.Close();
         }
     }
 }
