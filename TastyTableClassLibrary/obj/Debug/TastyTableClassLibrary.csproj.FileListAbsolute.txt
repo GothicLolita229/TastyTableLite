@@ -9,3 +9,14 @@ D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\Tast
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.csproj.CopyComplete
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.dll
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.pdb
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\bin\Debug\TastyTableClassLibrary.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\bin\Debug\TastyTableClassLibrary.pdb
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\bin\Debug\Dapper.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\bin\Debug\System.Data.SQLite.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\bin\Debug\Dapper.xml
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\bin\Debug\System.Data.SQLite.xml
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.csproj.AssemblyReference.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.csproj.CopyComplete
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\TastyTableClassLibrary\obj\Debug\TastyTableClassLibrary.pdb

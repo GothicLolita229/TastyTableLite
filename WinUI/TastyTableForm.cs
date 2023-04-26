@@ -87,5 +87,15 @@ namespace WinUI
 			searchUCF.Show();
 			searchUCF.BringToFront();
 		}
+
+		private void registerButton_Click(object sender, EventArgs e)
+		{
+			new RegistrationForm().Show();
+		}
+
+		private void loginButton_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

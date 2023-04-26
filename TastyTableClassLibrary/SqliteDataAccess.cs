@@ -7,24 +7,26 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace TastyTableClassLibrary
 {
 	public class SqliteDataAccess
 	{
-		public static List<User> LoadUser(string HashPass, string Username)
+		public static User LoadUser(string Username)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				var output = cnn.Query<User>("SELECT * from UserLogin WHERE Hashpass = @Hashpass AND Username = @Username", new DynamicParameters());
-				return output.ToList();
-			}
+                var parameters = new { Username = Username };
+                var output = cnn.QuerySingle<User>("SELECT * from UserLogin WHERE Username = @Username", parameters);
+                return output;
+            }
 		}
 		public static void SaveUser(User user)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				cnn.Execute("insert into UserLogin (FName, LName, HashPass, Salt) values (@FName, @LName, @HashPass, @Salt)", user);
+				cnn.Execute("insert into UserLogin (Username, FName, LName, HashPass, Salt) values (@Username, @FName, @LName, @HashPass, @Salt)", user);
 			}
 		}
 

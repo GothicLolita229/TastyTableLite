@@ -40,3 +40,12 @@ D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinU
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\bin\Debug\Dapper.xml
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.LogInForm.resources
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CopyComplete
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\TastyTableDB.db
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\System.Data.SQLite.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\TastyTableClassLibrary.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\Dapper.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\TastyTableClassLibrary.pdb
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\System.Data.SQLite.xml
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\bin\Debug\Dapper.xml
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.RegistrationForm.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CopyComplete
