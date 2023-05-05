@@ -32,6 +32,7 @@
 			this.panelFooterContainer = new System.Windows.Forms.Panel();
 			this.footerLabel = new System.Windows.Forms.Label();
 			this.panelHeaderContainer = new System.Windows.Forms.Panel();
+			this.ExitButton = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.loginButton = new System.Windows.Forms.Button();
 			this.registerButton = new System.Windows.Forms.Button();
@@ -85,6 +86,7 @@
 			// 
 			this.panelHeaderContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.panelHeaderContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panelHeaderContainer.Controls.Add(this.ExitButton);
 			this.panelHeaderContainer.Controls.Add(this.label1);
 			this.panelHeaderContainer.Controls.Add(this.loginButton);
 			this.panelHeaderContainer.Controls.Add(this.registerButton);
@@ -97,6 +99,20 @@
 			this.panelHeaderContainer.Name = "panelHeaderContainer";
 			this.panelHeaderContainer.Size = new System.Drawing.Size(1380, 108);
 			this.panelHeaderContainer.TabIndex = 2;
+			// 
+			// ExitButton
+			// 
+			this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
+			this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.ExitButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
+			this.ExitButton.Location = new System.Drawing.Point(649, 36);
+			this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
+			this.ExitButton.Name = "ExitButton";
+			this.ExitButton.Size = new System.Drawing.Size(123, 47);
+			this.ExitButton.TabIndex = 6;
+			this.ExitButton.Text = "Exit";
+			this.ExitButton.UseVisualStyleBackColor = false;
+			this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
 			// 
 			// label1
 			// 
@@ -390,6 +406,7 @@
 		private System.Windows.Forms.Button loginButton;
 		private System.Windows.Forms.Button registerButton;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button ExitButton;
 	}
 }
 
