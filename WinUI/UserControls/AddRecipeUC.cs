@@ -32,7 +32,6 @@ namespace WinUI
 
 			//User user = new User();
 			
-			//ing.Quantity = newIng.
 			//user.Username = userNametxt.Text;
 			//user.FName = firstNametxt.Text;
 			//user.LName = lastNametxt.Text;

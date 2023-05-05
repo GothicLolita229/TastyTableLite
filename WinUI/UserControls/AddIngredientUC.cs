@@ -30,7 +30,11 @@ namespace WinUI.UserControls
 			ing.Quantity = quantity;
 			ing.Unit = unit;
 
+			SqliteDataAccess.SaveIngredients(ing);
+			MessageBox.Show("Saved!"); //Comment out later
 			return ing;
+
+			
 		}
 	}
 }
