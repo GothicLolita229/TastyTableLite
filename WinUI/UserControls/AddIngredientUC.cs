@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TastyTableClassLibrary;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinUI.UserControls
 {
@@ -15,6 +17,20 @@ namespace WinUI.UserControls
 		public AddIngredientUC()
 		{
 			InitializeComponent();
+		}
+
+		public Ingredient SelectedIngr()
+		{
+			Ingredient ing = new Ingredient();
+			string name = textBox1.Text;
+			double quantity = double.Parse(QuantityComboBox.Text);
+			string unit = UnitComboBox.Text;
+
+			ing.Name = name;
+			ing.Quantity = quantity;
+			ing.Unit = unit;
+
+			return ing;
 		}
 	}
 }
