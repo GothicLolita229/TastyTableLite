@@ -305,47 +305,47 @@
 			// 
 			this.searchUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.searchUCF.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.searchUCF.Location = new System.Drawing.Point(209, 170);
+			this.searchUCF.Location = new System.Drawing.Point(0, 170);
 			this.searchUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.searchUCF.Name = "searchUCF";
-			this.searchUCF.Size = new System.Drawing.Size(1283, 710);
+			this.searchUCF.Size = new System.Drawing.Size(1492, 710);
 			this.searchUCF.TabIndex = 9;
 			// 
 			// aboutUCF
 			// 
 			this.aboutUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
-			this.aboutUCF.Location = new System.Drawing.Point(209, 170);
+			this.aboutUCF.Location = new System.Drawing.Point(0, 170);
 			this.aboutUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.aboutUCF.Name = "aboutUCF";
-			this.aboutUCF.Size = new System.Drawing.Size(1283, 706);
+			this.aboutUCF.Size = new System.Drawing.Size(1492, 706);
 			this.aboutUCF.TabIndex = 8;
 			// 
 			// addRecipeUCF
 			// 
 			this.addRecipeUCF.AutoScroll = true;
 			this.addRecipeUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
-			this.addRecipeUCF.Location = new System.Drawing.Point(209, 170);
+			this.addRecipeUCF.Location = new System.Drawing.Point(0, 170);
 			this.addRecipeUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.addRecipeUCF.Name = "addRecipeUCF";
-			this.addRecipeUCF.Size = new System.Drawing.Size(1283, 710);
+			this.addRecipeUCF.Size = new System.Drawing.Size(1492, 710);
 			this.addRecipeUCF.TabIndex = 7;
 			// 
 			// recipeBookUCF
 			// 
 			this.recipeBookUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
-			this.recipeBookUCF.Location = new System.Drawing.Point(209, 170);
+			this.recipeBookUCF.Location = new System.Drawing.Point(0, 170);
 			this.recipeBookUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.recipeBookUCF.Name = "recipeBookUCF";
-			this.recipeBookUCF.Size = new System.Drawing.Size(1283, 710);
+			this.recipeBookUCF.Size = new System.Drawing.Size(1492, 710);
 			this.recipeBookUCF.TabIndex = 6;
 			// 
 			// homeUCF
 			// 
 			this.homeUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
-			this.homeUCF.Location = new System.Drawing.Point(217, 170);
+			this.homeUCF.Location = new System.Drawing.Point(0, 170);
 			this.homeUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.homeUCF.Name = "homeUCF";
-			this.homeUCF.Size = new System.Drawing.Size(1275, 710);
+			this.homeUCF.Size = new System.Drawing.Size(1492, 710);
 			this.homeUCF.TabIndex = 5;
 			// 
 			// TastyTableForm
