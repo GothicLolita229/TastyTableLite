@@ -51,7 +51,7 @@
 			this.AddIngButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.AddIngButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.AddIngButton.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Bold);
-			this.AddIngButton.Location = new System.Drawing.Point(465, 33);
+			this.AddIngButton.Location = new System.Drawing.Point(528, 217);
 			this.AddIngButton.Name = "AddIngButton";
 			this.AddIngButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.AddIngButton.Size = new System.Drawing.Size(36, 32);
@@ -64,7 +64,7 @@
 			// 
 			this.QuantityLabel.AutoSize = true;
 			this.QuantityLabel.Font = new System.Drawing.Font("Segoe Print", 8F);
-			this.QuantityLabel.Location = new System.Drawing.Point(25, 41);
+			this.QuantityLabel.Location = new System.Drawing.Point(27, 225);
 			this.QuantityLabel.Name = "QuantityLabel";
 			this.QuantityLabel.Size = new System.Drawing.Size(73, 24);
 			this.QuantityLabel.TabIndex = 4;
@@ -74,7 +74,7 @@
 			// 
 			this.IngNameLabel.AutoSize = true;
 			this.IngNameLabel.Font = new System.Drawing.Font("Segoe Print", 8F);
-			this.IngNameLabel.Location = new System.Drawing.Point(311, 41);
+			this.IngNameLabel.Location = new System.Drawing.Point(298, 222);
 			this.IngNameLabel.Name = "IngNameLabel";
 			this.IngNameLabel.Size = new System.Drawing.Size(81, 24);
 			this.IngNameLabel.TabIndex = 5;
@@ -84,7 +84,7 @@
 			// 
 			this.UnitLabel.AutoSize = true;
 			this.UnitLabel.Font = new System.Drawing.Font("Segoe Print", 8F);
-			this.UnitLabel.Location = new System.Drawing.Point(134, 41);
+			this.UnitLabel.Location = new System.Drawing.Point(120, 222);
 			this.UnitLabel.Name = "UnitLabel";
 			this.UnitLabel.Size = new System.Drawing.Size(160, 24);
 			this.UnitLabel.TabIndex = 6;

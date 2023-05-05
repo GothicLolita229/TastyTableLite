@@ -10,42 +10,33 @@ using System.Windows.Forms;
 using TastyTableClassLibrary;
 using WinUI.UserControls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Button = System.Windows.Forms.Button;
 
 namespace WinUI
 {
 	public partial class AddRecipeUC : UserControl
 	{
+		public List<Ingredient> IngredientsForRecipe = new List<Ingredient>();
 		public AddRecipeUC()
 		{
 			InitializeComponent();
 		}
 
-		int addIngrControl = 1;
+		int addIngrControl = 5;
+		int addIngButton = 5;
 		private void AddIngButton_Click(object sender, EventArgs e)
 		{
 			AddIngredientUC newIng = new AddIngredientUC();
+			Button newButton = new Button();
 			this.Controls.Add(newIng);
+			this.Controls.Add(newButton);
 
-			newIng.Top = addIngrControl * 50;
+			newIng.Top = addIngrControl * 40;
+			newButton.Top = addIngButton * 40;
 			newIng.Left = 11;
+			newButton.Left = 500;
+			addIngButton += 1;
 			addIngrControl += 1;
-
-			//User user = new User();
-			
-			//user.Username = userNametxt.Text;
-			//user.FName = firstNametxt.Text;
-			//user.LName = lastNametxt.Text;
-			//user.Salt = User.CreateSalt(10);
-			//user.HashPass = User.EncryptPassword(passwordtxt.Text, user.Salt);
-
-			//SqliteDataAccess.SaveUser(user);
-
-			//MessageBox.Show("You have successfully made an account!");
-			//this.Close();
-			
-			
-
-			
 		}
 
 		
