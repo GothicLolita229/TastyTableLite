@@ -46,7 +46,23 @@ namespace TastyTableClassLibrary
 			}
 		}
 
-		private static string LoadConnectionString(string id = "Default")
+        public static List<Recipe> LoadRecipe()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Recipe>("SELECT * from Recipe", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+		public static void SaveRecipe(Recipe recipe) 
+		{
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString())) 
+			{
+				cnn.Execute("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar", recipe);
+			}
+        }
+
+        private static string LoadConnectionString(string id = "Default")
 		{
 			return ConfigurationManager.ConnectionStrings[id].ConnectionString;
 		}
