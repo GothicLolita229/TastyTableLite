@@ -30,6 +30,7 @@ namespace WinUI
             SqliteDataAccess.SaveUser(user);
 
             MessageBox.Show("You have successfully made an account!");
+            this.Close();
         }
 
         private void exitLabel_Click(object sender, EventArgs e)

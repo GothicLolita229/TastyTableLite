@@ -38,6 +38,7 @@ namespace WinUI
                 if (attemptedHashPass == user.HashPass)
                 {
                     MessageBox.Show("You've successfully logged in, welcome!");
+                    this.Close();
                 }    
                 else
                 {

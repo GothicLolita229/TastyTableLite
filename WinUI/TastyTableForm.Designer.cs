@@ -32,6 +32,7 @@
 			this.panelFooterContainer = new System.Windows.Forms.Panel();
 			this.footerLabel = new System.Windows.Forms.Label();
 			this.panelHeaderContainer = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
 			this.loginButton = new System.Windows.Forms.Button();
 			this.registerButton = new System.Windows.Forms.Button();
 			this.WelcomeLabel = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
 			this.addRecipeUCF = new WinUI.AddRecipeUC();
 			this.recipeBookUCF = new WinUI.RecipeBookUC();
 			this.homeUCF = new WinUI.HomeUC();
-			this.label1 = new System.Windows.Forms.Label();
 			this.panelFooterContainer.SuspendLayout();
 			this.panelHeaderContainer.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
@@ -98,15 +98,25 @@
 			this.panelHeaderContainer.Size = new System.Drawing.Size(1380, 108);
 			this.panelHeaderContainer.TabIndex = 2;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Bold);
+			this.label1.Location = new System.Drawing.Point(1133, 36);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(119, 38);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Welcome!";
+			// 
 			// loginButton
 			// 
 			this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
 			this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.loginButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
 			this.loginButton.Location = new System.Drawing.Point(518, 36);
-			this.loginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.loginButton.Margin = new System.Windows.Forms.Padding(4);
 			this.loginButton.Name = "loginButton";
-			this.loginButton.Size = new System.Drawing.Size(105, 47);
+			this.loginButton.Size = new System.Drawing.Size(123, 47);
 			this.loginButton.TabIndex = 4;
 			this.loginButton.Text = "Log In";
 			this.loginButton.UseVisualStyleBackColor = false;
@@ -117,10 +127,10 @@
 			this.registerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
 			this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.registerButton.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
-			this.registerButton.Location = new System.Drawing.Point(399, 36);
-			this.registerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.registerButton.Location = new System.Drawing.Point(374, 36);
+			this.registerButton.Margin = new System.Windows.Forms.Padding(4);
 			this.registerButton.Name = "registerButton";
-			this.registerButton.Size = new System.Drawing.Size(111, 47);
+			this.registerButton.Size = new System.Drawing.Size(136, 47);
 			this.registerButton.TabIndex = 3;
 			this.registerButton.Text = "Register";
 			this.registerButton.UseVisualStyleBackColor = false;
@@ -296,6 +306,7 @@
 			// 
 			// addRecipeUCF
 			// 
+			this.addRecipeUCF.AutoScroll = true;
 			this.addRecipeUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.addRecipeUCF.Location = new System.Drawing.Point(209, 170);
 			this.addRecipeUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -320,16 +331,6 @@
 			this.homeUCF.Name = "homeUCF";
 			this.homeUCF.Size = new System.Drawing.Size(1275, 710);
 			this.homeUCF.TabIndex = 5;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Bold);
-			this.label1.Location = new System.Drawing.Point(1133, 36);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(119, 38);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Welcome!";
 			// 
 			// TastyTableForm
 			// 

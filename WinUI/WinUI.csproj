@@ -63,6 +63,12 @@
     <Compile Include="LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AddIngredientUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddIngredientUC.Designer.cs">
+      <DependentUpon>AddIngredientUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AboutUC.resx">
       <DependentUpon>AboutUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AddIngredientUC.resx">
+      <DependentUpon>AddIngredientUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddRecipeUC.resx">
       <DependentUpon>AddRecipeUC.cs</DependentUpon>

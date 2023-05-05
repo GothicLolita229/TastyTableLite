@@ -95,7 +95,9 @@ namespace WinUI
 
 		private void loginButton_Click(object sender, EventArgs e)
 		{
-			new LogInForm().Show();
+			LogInForm login = new LogInForm();
+			login.Show();
+			
 		}
 	}
 }
