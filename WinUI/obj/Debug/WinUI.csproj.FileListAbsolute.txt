@@ -51,3 +51,4 @@ C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.R
 C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.csproj.CopyComplete
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.RegistrationForm.resources
 D:\ASchool_Fall_2022-Spring2023\Spring_2023\CSC-289 Capstone\TastyTableLite\WinUI\obj\Debug\WinUI.UserControls.AddIngredientUC.resources
+C:\Users\snowt\OneDrive\Desktop\coding\C#\TastyTableLite\WinUI\obj\Debug\WinUI.UserControls.AddIngredientUC.resources

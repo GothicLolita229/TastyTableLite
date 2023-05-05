@@ -20,17 +20,35 @@ namespace WinUI
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.Username = userNametxt.Text;
-            user.FName = firstNametxt.Text;
-            user.LName = lastNametxt.Text;
-            user.Salt = User.CreateSalt(10);
-            user.HashPass = User.EncryptPassword(passwordtxt.Text, user.Salt);
+            if ((userNametxt.Text == "") || (firstNametxt.Text == "") || (lastNametxt.Text == "") || (passwordtxt.Text == "") || (confirmpasstxt.Text == ""))
 
-            SqliteDataAccess.SaveUser(user);
+            {
+                MessageBox.Show("One or more of the fields are not filled in.");
+            }
+            else
+            {
+                // check if passwords match 
+                // if passwords match create account
+                // if passwords do not match then show message box
+                if (passwordtxt.Text == confirmpasstxt.Text)
+                {
+                    User user = new User();
+                    user.Username = userNametxt.Text;
+                    user.FName = firstNametxt.Text;
+                    user.LName = lastNametxt.Text;
+                    user.Salt = User.CreateSalt(10);
+                    user.HashPass = User.EncryptPassword(passwordtxt.Text, user.Salt);
 
-            MessageBox.Show("You have successfully made an account!");
-            this.Close();
+                    SqliteDataAccess.SaveUser(user);
+
+                    MessageBox.Show("You have successfully made an account!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Your passwords do not match.");
+                }
+            }
         }
 
         private void exitLabel_Click(object sender, EventArgs e)
