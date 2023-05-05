@@ -23,30 +23,37 @@ namespace WinUI
             //checks if user exists via username
             // if i also did password i couldn't verify it properly
             User user = new User();
-            string username = usernametxt.Text;
-            user = SqliteDataAccess.LoadUser(username);
-
-            // check for password/if user even exists
-
-            if (user == null)
+            //checks if username is null and if it is displays message box
+            // if it's filled it, it goes onto the next step of checking the password and etc.
+            if (usernametxt.Text == "")
             {
-                MessageBox.Show("Invalid username or password! Try again or register for an account!");
+                MessageBox.Show("Please enter in a username in order to log in!");
             }
             else
             {
-                string attemptedHashPass = User.EncryptPassword(txtPassword.Text, user.Salt);
-                if (attemptedHashPass == user.HashPass)
+                string username = usernametxt.Text;
+                user = SqliteDataAccess.LoadUser(username);
+
+                // check for password/if user even exists
+
+                if (user == null)
                 {
-                    MessageBox.Show("You've successfully logged in, welcome!");
-                    this.Close();
-                }    
+                    MessageBox.Show("Invalid username or password! Try again or register for an account!");
+                }
                 else
                 {
-                    MessageBox.Show("Invalid username or password! Try again or register for an account!2");
+                    string attemptedHashPass = User.EncryptPassword(txtPassword.Text, user.Salt);
+                    if (attemptedHashPass == user.HashPass)
+                    {
+                        MessageBox.Show("You've successfully logged in, welcome!");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password! Try again or register for an account!");
+                    }
                 }
             }
-
-
         }
 
         private void exitLabel_Click(object sender, EventArgs e)
