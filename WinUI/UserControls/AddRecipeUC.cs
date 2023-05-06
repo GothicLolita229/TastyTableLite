@@ -16,26 +16,20 @@ namespace WinUI
 {
 	public partial class AddRecipeUC : UserControl
 	{
-		public List<Ingredient> IngredientsForRecipe = new List<Ingredient>();
+		
 		public AddRecipeUC()
 		{
 			InitializeComponent();
 		}
 
 		int addIngrControl = 5;
-		int addIngButton = 5;
 		private void AddIngButton_Click(object sender, EventArgs e)
 		{
 			AddIngredientUC newIng = new AddIngredientUC();
-			Button newButton = new Button();
 			this.Controls.Add(newIng);
-			this.Controls.Add(newButton);
 
 			newIng.Top = addIngrControl * 40;
-			newButton.Top = addIngButton * 40;
 			newIng.Left = 11;
-			newButton.Left = 500;
-			addIngButton += 1;
 			addIngrControl += 1;
 		}
 

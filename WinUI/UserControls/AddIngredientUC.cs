@@ -18,8 +18,9 @@ namespace WinUI.UserControls
 		{
 			InitializeComponent();
 		}
+		public List<Ingredient> IngredientsForRecipe = new List<Ingredient>();
 
-		public Ingredient SelectedIngr()
+		public void SelectedIngr()
 		{
 			Ingredient ing = new Ingredient();
 			string name = textBox1.Text;
@@ -32,8 +33,7 @@ namespace WinUI.UserControls
 
 			SqliteDataAccess.SaveIngredients(ing);
 			MessageBox.Show("Saved!"); //Comment out later
-			return ing;
-
+			IngredientsForRecipe.Add(ing);
 			
 		}
 	}
