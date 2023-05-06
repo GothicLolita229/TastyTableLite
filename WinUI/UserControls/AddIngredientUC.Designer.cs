@@ -31,6 +31,7 @@
 			this.QuantityComboBox = new System.Windows.Forms.ComboBox();
 			this.UnitComboBox = new System.Windows.Forms.ComboBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.SaveButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// QuantityComboBox
@@ -176,16 +177,27 @@
 			this.textBox1.Size = new System.Drawing.Size(283, 31);
 			this.textBox1.TabIndex = 2;
 			// 
+			// SaveButton
+			// 
+			this.SaveButton.Location = new System.Drawing.Point(617, 18);
+			this.SaveButton.Name = "SaveButton";
+			this.SaveButton.Size = new System.Drawing.Size(75, 23);
+			this.SaveButton.TabIndex = 3;
+			this.SaveButton.Text = "Save";
+			this.SaveButton.UseVisualStyleBackColor = true;
+			this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+			// 
 			// AddIngredientUC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
+			this.Controls.Add(this.SaveButton);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.UnitComboBox);
 			this.Controls.Add(this.QuantityComboBox);
 			this.Name = "AddIngredientUC";
-			this.Size = new System.Drawing.Size(597, 60);
+			this.Size = new System.Drawing.Size(726, 60);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -196,5 +208,6 @@
 		private System.Windows.Forms.ComboBox QuantityComboBox;
 		private System.Windows.Forms.ComboBox UnitComboBox;
 		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Button SaveButton;
 	}
 }

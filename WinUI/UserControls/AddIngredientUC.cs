@@ -36,5 +36,10 @@ namespace WinUI.UserControls
 			IngredientsForRecipe.Add(ing);
 			
 		}
+
+		private void SaveButton_Click(object sender, EventArgs e)
+		{
+			SelectedIngr();
+		}
 	}
 }

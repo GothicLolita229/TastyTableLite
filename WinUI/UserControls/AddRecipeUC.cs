@@ -20,6 +20,10 @@ namespace WinUI
 		public AddRecipeUC()
 		{
 			InitializeComponent();
+			QuantityLabel.Hide();
+			UnitLabel.Hide();
+			IngNameLabel.Hide();
+			AddIngButton.Hide();
 		}
 
 		int addIngrControl = 5;
@@ -32,6 +36,8 @@ namespace WinUI
 			newIng.Left = 11;
 			addIngrControl += 1;
 		}
+
+
 
 		
 	}
