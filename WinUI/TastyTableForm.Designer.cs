@@ -317,7 +317,7 @@
 			this.aboutUCF.Location = new System.Drawing.Point(0, 170);
 			this.aboutUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.aboutUCF.Name = "aboutUCF";
-			this.aboutUCF.Size = new System.Drawing.Size(1492, 706);
+			this.aboutUCF.Size = new System.Drawing.Size(1380, 618);
 			this.aboutUCF.TabIndex = 8;
 			// 
 			// addRecipeUCF
@@ -336,7 +336,7 @@
 			this.recipeBookUCF.Location = new System.Drawing.Point(0, 170);
 			this.recipeBookUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.recipeBookUCF.Name = "recipeBookUCF";
-			this.recipeBookUCF.Size = new System.Drawing.Size(1492, 710);
+			this.recipeBookUCF.Size = new System.Drawing.Size(1380, 618);
 			this.recipeBookUCF.TabIndex = 6;
 			// 
 			// homeUCF
@@ -352,6 +352,8 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSize = true;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(1380, 788);
 			this.Controls.Add(this.searchUCF);

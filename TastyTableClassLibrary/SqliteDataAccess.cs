@@ -54,6 +54,16 @@ namespace TastyTableClassLibrary
                 return output.ToList();
             }
         }
+
+		public static Recipe LoadRecipeID(string Name)
+		{
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				var parameters = new { Name = Name };
+				var output = cnn.QuerySingle<Recipe>("SELECT ID from Recipe WHERE Name = @Name", parameters);
+				return output;
+			}
+		}
 		public static void SaveRecipe(Recipe recipe) 
 		{
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString())) 

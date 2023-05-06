@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,14 +17,22 @@ namespace WinUI
 {
 	public partial class AddRecipeUC : UserControl
 	{
-		
+		Recipe newRecipe = new Recipe();
 		public AddRecipeUC()
 		{
 			InitializeComponent();
-			QuantityLabel.Hide();
-			UnitLabel.Hide();
-			IngNameLabel.Hide();
-			AddIngButton.Hide();
+			QuantityLabel.Visible= false;
+			UnitLabel.Visible= false;
+			IngNameLabel.Visible = false;
+			AddIngButton.Visible = false;
+			TempCharComboBox.Visible = false;
+			TempCharLabel.Visible = false;
+			RecipeNameLabel.Visible = false;
+			RecipeNameTextBox.Visible = false;
+			TempNumLabel.Visible = false;
+			TempNumTextBox.Visible = false;
+			DisplayRecipeTextBox.Visible = false;
+			ReadyButton.Visible = false;
 		}
 
 		int addIngrControl = 5;
@@ -37,8 +46,45 @@ namespace WinUI
 			addIngrControl += 1;
 		}
 
+		private void AddNewRecipeButton_Click(object sender, EventArgs e)
+		{
+			//QuantityLabel.Visible = true;
+			//UnitLabel.Visible = true;
+			//IngNameLabel.Visible = true;
+			//AddIngButton.Visible = true;
+			TempCharComboBox.Visible = true;
+			TempCharLabel.Visible = true;
+			RecipeNameLabel.Visible = true;
+			RecipeNameTextBox.Visible = true;
+			TempNumLabel.Visible = true;
+			TempNumTextBox.Visible = true;
+			ReadyButton.Visible = true;
 
+		}
 
-		
+		public void SaveRecipeName()
+		{
+			DisplayRecipeTextBox.Visible = true;
+			newRecipe.Name = RecipeNameTextBox.Text;
+			Int32.TryParse(TempNumTextBox.Text, out int temp);
+			newRecipe.TempNum = temp;
+			newRecipe.TempChar = TempCharComboBox.Text;
+			SqliteDataAccess.SaveRecipe(newRecipe);
+		}
+
+		private void ReadyButton_Click(object sender, EventArgs e)
+		{
+			QuantityLabel.Visible = true;
+			UnitLabel.Visible = true;
+			IngNameLabel.Visible = true;
+			AddIngButton.Visible = true;
+			SaveRecipeName();
+			string name = newRecipe.Name;
+
+			List<Recipe> recDisplay = SqliteDataAccess.LoadRecipe();
+			//DisplayRecipeTextBox.Text = SqliteDataAccess.LoadRecipeID(name);
+
+			foreach (Recipe rec in recDisplay) { DisplayRecipeTextBox.Text = rec.Name; }
+		}
 	}
 }

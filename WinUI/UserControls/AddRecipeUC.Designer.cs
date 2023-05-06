@@ -28,23 +28,20 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.AddRecipeUCLabel = new System.Windows.Forms.Label();
 			this.AddIngButton = new System.Windows.Forms.Button();
 			this.QuantityLabel = new System.Windows.Forms.Label();
 			this.IngNameLabel = new System.Windows.Forms.Label();
 			this.UnitLabel = new System.Windows.Forms.Label();
+			this.AddNewRecipeButton = new System.Windows.Forms.Button();
+			this.RecipeNameLabel = new System.Windows.Forms.Label();
+			this.TempNumLabel = new System.Windows.Forms.Label();
+			this.TempCharLabel = new System.Windows.Forms.Label();
+			this.RecipeNameTextBox = new System.Windows.Forms.TextBox();
+			this.TempNumTextBox = new System.Windows.Forms.TextBox();
+			this.TempCharComboBox = new System.Windows.Forms.ComboBox();
+			this.DisplayRecipeTextBox = new System.Windows.Forms.TextBox();
+			this.ReadyButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
-			// 
-			// AddRecipeUCLabel
-			// 
-			this.AddRecipeUCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.AddRecipeUCLabel.AutoSize = true;
-			this.AddRecipeUCLabel.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold);
-			this.AddRecipeUCLabel.Location = new System.Drawing.Point(3, 0);
-			this.AddRecipeUCLabel.Name = "AddRecipeUCLabel";
-			this.AddRecipeUCLabel.Size = new System.Drawing.Size(239, 65);
-			this.AddRecipeUCLabel.TabIndex = 2;
-			this.AddRecipeUCLabel.Text = "Add Recipe";
 			// 
 			// AddIngButton
 			// 
@@ -64,7 +61,7 @@
 			// 
 			this.QuantityLabel.AutoSize = true;
 			this.QuantityLabel.Font = new System.Drawing.Font("Segoe Print", 8F);
-			this.QuantityLabel.Location = new System.Drawing.Point(27, 225);
+			this.QuantityLabel.Location = new System.Drawing.Point(27, 222);
 			this.QuantityLabel.Name = "QuantityLabel";
 			this.QuantityLabel.Size = new System.Drawing.Size(73, 24);
 			this.QuantityLabel.TabIndex = 4;
@@ -90,30 +87,137 @@
 			this.UnitLabel.TabIndex = 6;
 			this.UnitLabel.Text = "Unit of Measurement";
 			// 
+			// AddNewRecipeButton
+			// 
+			this.AddNewRecipeButton.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold);
+			this.AddNewRecipeButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.AddNewRecipeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.AddNewRecipeButton.Location = new System.Drawing.Point(494, 0);
+			this.AddNewRecipeButton.Name = "AddNewRecipeButton";
+			this.AddNewRecipeButton.Size = new System.Drawing.Size(286, 67);
+			this.AddNewRecipeButton.TabIndex = 7;
+			this.AddNewRecipeButton.Text = "Add Recipe";
+			this.AddNewRecipeButton.UseVisualStyleBackColor = true;
+			this.AddNewRecipeButton.Click += new System.EventHandler(this.AddNewRecipeButton_Click);
+			// 
+			// RecipeNameLabel
+			// 
+			this.RecipeNameLabel.AutoSize = true;
+			this.RecipeNameLabel.Font = new System.Drawing.Font("Segoe Print", 8F);
+			this.RecipeNameLabel.Location = new System.Drawing.Point(18, 46);
+			this.RecipeNameLabel.Name = "RecipeNameLabel";
+			this.RecipeNameLabel.Size = new System.Drawing.Size(100, 24);
+			this.RecipeNameLabel.TabIndex = 8;
+			this.RecipeNameLabel.Text = "Recipe Name";
+			// 
+			// TempNumLabel
+			// 
+			this.TempNumLabel.AutoSize = true;
+			this.TempNumLabel.Font = new System.Drawing.Font("Segoe Print", 8F);
+			this.TempNumLabel.Location = new System.Drawing.Point(18, 87);
+			this.TempNumLabel.Name = "TempNumLabel";
+			this.TempNumLabel.Size = new System.Drawing.Size(101, 24);
+			this.TempNumLabel.TabIndex = 9;
+			this.TempNumLabel.Text = "Temperature";
+			// 
+			// TempCharLabel
+			// 
+			this.TempCharLabel.AutoSize = true;
+			this.TempCharLabel.Font = new System.Drawing.Font("Segoe Print", 8F);
+			this.TempCharLabel.Location = new System.Drawing.Point(82, 124);
+			this.TempCharLabel.Name = "TempCharLabel";
+			this.TempCharLabel.Size = new System.Drawing.Size(36, 24);
+			this.TempCharLabel.TabIndex = 10;
+			this.TempCharLabel.Text = "F/C";
+			// 
+			// RecipeNameTextBox
+			// 
+			this.RecipeNameTextBox.Location = new System.Drawing.Point(124, 46);
+			this.RecipeNameTextBox.Name = "RecipeNameTextBox";
+			this.RecipeNameTextBox.Size = new System.Drawing.Size(255, 22);
+			this.RecipeNameTextBox.TabIndex = 11;
+			// 
+			// TempNumTextBox
+			// 
+			this.TempNumTextBox.Location = new System.Drawing.Point(125, 87);
+			this.TempNumTextBox.Name = "TempNumTextBox";
+			this.TempNumTextBox.Size = new System.Drawing.Size(136, 22);
+			this.TempNumTextBox.TabIndex = 12;
+			// 
+			// TempCharComboBox
+			// 
+			this.TempCharComboBox.FormattingEnabled = true;
+			this.TempCharComboBox.Items.AddRange(new object[] {
+            "F",
+            "C"});
+			this.TempCharComboBox.Location = new System.Drawing.Point(125, 125);
+			this.TempCharComboBox.Name = "TempCharComboBox";
+			this.TempCharComboBox.Size = new System.Drawing.Size(136, 24);
+			this.TempCharComboBox.TabIndex = 13;
+			// 
+			// DisplayRecipeTextBox
+			// 
+			this.DisplayRecipeTextBox.Dock = System.Windows.Forms.DockStyle.Right;
+			this.DisplayRecipeTextBox.Font = new System.Drawing.Font("Segoe Print", 8F);
+			this.DisplayRecipeTextBox.Location = new System.Drawing.Point(780, 0);
+			this.DisplayRecipeTextBox.Multiline = true;
+			this.DisplayRecipeTextBox.Name = "DisplayRecipeTextBox";
+			this.DisplayRecipeTextBox.Size = new System.Drawing.Size(291, 714);
+			this.DisplayRecipeTextBox.TabIndex = 14;
+			// 
+			// ReadyButton
+			// 
+			this.ReadyButton.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+			this.ReadyButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.ReadyButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.ReadyButton.Location = new System.Drawing.Point(22, 168);
+			this.ReadyButton.Name = "ReadyButton";
+			this.ReadyButton.Size = new System.Drawing.Size(280, 33);
+			this.ReadyButton.TabIndex = 15;
+			this.ReadyButton.Text = "Ready to add ingredients?";
+			this.ReadyButton.UseVisualStyleBackColor = true;
+			this.ReadyButton.Click += new System.EventHandler(this.ReadyButton_Click);
+			// 
 			// AddRecipeUC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
+			this.AutoSize = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
+			this.Controls.Add(this.ReadyButton);
+			this.Controls.Add(this.DisplayRecipeTextBox);
+			this.Controls.Add(this.TempCharComboBox);
+			this.Controls.Add(this.TempNumTextBox);
+			this.Controls.Add(this.RecipeNameTextBox);
+			this.Controls.Add(this.TempCharLabel);
+			this.Controls.Add(this.TempNumLabel);
+			this.Controls.Add(this.RecipeNameLabel);
+			this.Controls.Add(this.AddNewRecipeButton);
 			this.Controls.Add(this.UnitLabel);
 			this.Controls.Add(this.IngNameLabel);
 			this.Controls.Add(this.QuantityLabel);
 			this.Controls.Add(this.AddIngButton);
-			this.Controls.Add(this.AddRecipeUCLabel);
 			this.Name = "AddRecipeUC";
-			this.Size = new System.Drawing.Size(953, 735);
+			this.Size = new System.Drawing.Size(953, 714);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Label AddRecipeUCLabel;
 		private System.Windows.Forms.Button AddIngButton;
 		private System.Windows.Forms.Label QuantityLabel;
 		private System.Windows.Forms.Label IngNameLabel;
 		private System.Windows.Forms.Label UnitLabel;
+		private System.Windows.Forms.Button AddNewRecipeButton;
+		private System.Windows.Forms.Label RecipeNameLabel;
+		private System.Windows.Forms.Label TempNumLabel;
+		private System.Windows.Forms.Label TempCharLabel;
+		private System.Windows.Forms.TextBox RecipeNameTextBox;
+		private System.Windows.Forms.TextBox TempNumTextBox;
+		private System.Windows.Forms.ComboBox TempCharComboBox;
+		private System.Windows.Forms.TextBox DisplayRecipeTextBox;
+		private System.Windows.Forms.Button ReadyButton;
 	}
 }
