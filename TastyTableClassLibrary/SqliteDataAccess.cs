@@ -119,6 +119,17 @@ namespace TastyTableClassLibrary
             }
         }
 
+        public static List<string> PullRecipeInfo(string RecName)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { RecName = RecName };
+                return cnn.Query<string>("SELECT Recipe.RecName, Recipe.TempNum, Recipe.TempChar, Instruction.StepNum, Instruction.Description, Ingredient.IngName, Ingredient.Quantity," +
+                    " Ingredient.Unit FROM Recipe JOIN Instruction ON Recipe.RecID = Instruction.RecID JOIN RecipeIngr ON Recipe.RecID = RecipeIngr.RecID JOIN Ingredient " +
+                    "ON RecipeIngr.IngID = Ingredient.IngID WHERE Recipe.RecName = @RecName", parameters).ToList();
+            }
+        }
+
         private static string LoadConnectionString(string id = "Default")
 		{
 			return ConfigurationManager.ConnectionStrings[id].ConnectionString;
