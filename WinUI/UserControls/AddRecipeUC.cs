@@ -94,7 +94,7 @@ namespace WinUI
 			//return newRecipe.ID;
         //}
 
-		internal static int GetRecipe()
+		internal static int PassRecipeID()
 		{
             return newRecipe.ID;
         }

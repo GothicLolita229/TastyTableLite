@@ -19,7 +19,7 @@ namespace WinUI.UserControls
 			InitializeComponent();
 		}
 		public List<Ingredient> IngredientsForRecipe = new List<Ingredient>();
-		public RecipeBridge recipeBridge = new RecipeBridge();
+		//public RecipeBridge recipeBridge = new RecipeBridge();
 		public int recipeID;
 		public int ingredientID;
 
@@ -30,6 +30,8 @@ namespace WinUI.UserControls
 			double quantity = double.Parse(QuantityComboBox.Text);
 			string unit = UnitComboBox.Text;
 
+			RecipeBridge recipeBridge = new RecipeBridge();
+
 			ing.Name = name;
 			ing.Quantity = quantity;
 			ing.Unit = unit;
@@ -37,18 +39,19 @@ namespace WinUI.UserControls
 			SqliteDataAccess.SaveIngredients(ing);
 			MessageBox.Show("Saved!"); //Comment out later
 			IngredientsForRecipe.Add(ing);
-			recipeID = AddRecipeUC.GetRecipe();
+			recipeID = AddRecipeUC.PassRecipeID();
 			ingredientID = SqliteDataAccess.LoadIngredientID(ing.Name).ID;
 			MessageBox.Show(recipeID.ToString() + ingredientID.ToString());
 			recipeBridge.RecID = recipeID;
 			recipeBridge.IngID = ingredientID;
+			SqliteDataAccess.SavetoBridge(recipeBridge);
 			// Fix recipeID retrieval 
 		}
 
 		private void SaveButton_Click(object sender, EventArgs e)
 		{
 			SelectedIngr();
-            SqliteDataAccess.SavetoBridge(recipeBridge);
+            
         }
 
 	}
