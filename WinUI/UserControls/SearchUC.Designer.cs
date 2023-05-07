@@ -35,7 +35,7 @@
 			// 
 			this.SearchUCLabel.AutoSize = true;
 			this.SearchUCLabel.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold);
-			this.SearchUCLabel.Location = new System.Drawing.Point(396, 315);
+			this.SearchUCLabel.Location = new System.Drawing.Point(372, 0);
 			this.SearchUCLabel.Name = "SearchUCLabel";
 			this.SearchUCLabel.Size = new System.Drawing.Size(154, 65);
 			this.SearchUCLabel.TabIndex = 3;

@@ -147,7 +147,6 @@
 			// 
 			// UnitComboBox
 			// 
-			this.UnitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.UnitComboBox.Font = new System.Drawing.Font("Segoe Print", 8F);
 			this.UnitComboBox.FormattingEnabled = true;
 			this.UnitComboBox.Items.AddRange(new object[] {
@@ -157,6 +156,9 @@
             "Fluid Ounce",
             "Ounce",
             "Can",
+            "Slices",
+            "Buns",
+            "Packages",
             "Gram",
             "Pound",
             "Pint",

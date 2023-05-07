@@ -94,7 +94,6 @@ namespace WinUI
         }
 		private void DonWIngButton_Click(object sender, EventArgs e)
 		{
-			
 			AddIngButton.Visible = false;
 			string message = "How many steps are in this recipe?";
 			string title = "Recipe Instructions";

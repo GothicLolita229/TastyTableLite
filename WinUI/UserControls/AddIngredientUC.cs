@@ -41,7 +41,7 @@ namespace WinUI.UserControls
 			IngredientsForRecipe.Add(ing);
 			recipeID = AddRecipeUC.PassRecipeID();
 			ingredientID = SqliteDataAccess.LoadIngredientID(ing.Name).ID;
-			MessageBox.Show(recipeID.ToString() + ingredientID.ToString());
+			//MessageBox.Show(recipeID.ToString() + ingredientID.ToString());
 			recipeBridge.RecID = recipeID;
 			recipeBridge.IngID = ingredientID;
 			SqliteDataAccess.SavetoBridge(recipeBridge);

@@ -95,13 +95,11 @@ namespace WinUI
 		{
 			new RegistrationForm().Show();
 		}
-
 		private void loginButton_Click(object sender, EventArgs e)
 		{
 			LogInForm login = new LogInForm();
 			login.Show();
 		}
-
 		private void ExitButton_Click(object sender, EventArgs e)
 		{
 			this.Close();
