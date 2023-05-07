@@ -45,7 +45,6 @@ namespace TastyTableClassLibrary
 				cnn.Execute("insert into Ingredient (Name, Quantity, Unit) values (@Name, @Quantity, @Unit)", ingr);
 			}
 		}
-
 		public static int SaveIngrReturnID(Ingredient ingr)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -53,7 +52,6 @@ namespace TastyTableClassLibrary
 				return cnn.QuerySingle<int>("insert into Ingredient (Name, Quantity, Unit) values (@Name, @Quantity, @Unit) RETURNING ID", ingr);
 			}
 		}
-
 		public static void SaveInstructions(Instruction inst)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -61,7 +59,6 @@ namespace TastyTableClassLibrary
 				cnn.Execute("insert into Instruction (StepNum, Description, RecID) values (@StepNum, @Description, @RecID)", inst);
 			}
 		}
-
 		//public static int SaveInstructions(Instruction inst)
 		//{
 		//	using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
