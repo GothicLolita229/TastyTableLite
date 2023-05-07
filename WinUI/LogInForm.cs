@@ -17,12 +17,12 @@ namespace WinUI
         {
             InitializeComponent();
         }
-
-        private void loginButton_Click(object sender, EventArgs e)
+		public static User user = new User();
+		private void loginButton_Click(object sender, EventArgs e)
         {
             //checks if user exists via username
             // if i also did password i couldn't verify it properly
-            User user = new User();
+            //User user = new User();
             //checks if username is null and if it is displays message box
             // if it's filled it, it goes onto the next step of checking the password and etc.
             if (usernametxt.Text == "")
@@ -56,9 +56,25 @@ namespace WinUI
             }
         }
 
-        private void exitLabel_Click(object sender, EventArgs e)
+        internal static string ReturnUser()
+        {
+            return user.Username;
+        }
+
+		//private void RegisterFormOpen(RegistrationForm form)
+		//{
+		//	form.BringToFront();
+
+		//}
+		private void exitLabel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-    }
+
+		//      private RegistrationForm form = new RegistrationForm();
+		private void RegisterLabel_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

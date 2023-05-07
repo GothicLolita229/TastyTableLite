@@ -323,6 +323,7 @@
 			// addRecipeUCF
 			// 
 			this.addRecipeUCF.AutoScroll = true;
+			this.addRecipeUCF.AutoSize = true;
 			this.addRecipeUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.addRecipeUCF.Location = new System.Drawing.Point(0, 170);
 			this.addRecipeUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -352,7 +353,6 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(1380, 788);
@@ -380,6 +380,7 @@
 			this.userInfoPanel.ResumeLayout(false);
 			this.userInfoPanel.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 

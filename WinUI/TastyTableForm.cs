@@ -15,6 +15,7 @@ namespace WinUI
 		public TastyTableForm()
 		{
 			InitializeComponent();
+			
 		}
 
 		private void TastyTableForm_Load(object sender, EventArgs e)
@@ -26,6 +27,9 @@ namespace WinUI
 			addRecipeUCF.Hide();
 			aboutUCF.Hide();
 			searchUCF.Hide();
+			string user = LogInForm.ReturnUser();
+			label1.Text = "Welcome, " + user + "!";
+			
 		}
 
 		private void HomeButton_Click(object sender, EventArgs e)
@@ -97,7 +101,6 @@ namespace WinUI
 		{
 			LogInForm login = new LogInForm();
 			login.Show();
-			
 		}
 
 		private void ExitButton_Click(object sender, EventArgs e)
