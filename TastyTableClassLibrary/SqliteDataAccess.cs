@@ -68,7 +68,7 @@ namespace TastyTableClassLibrary
 		{
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString())) 
 			{
-				cnn.Execute("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar", recipe);
+				cnn.Execute("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar)", recipe);
 			}
         }
 
