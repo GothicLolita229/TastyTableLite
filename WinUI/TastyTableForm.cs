@@ -29,7 +29,6 @@ namespace WinUI
 			searchUCF.Hide();
 			string user = LogInForm.ReturnUser();
 			label1.Text = "Welcome, " + user + "!";
-			
 		}
 
 		private void HomeButton_Click(object sender, EventArgs e)

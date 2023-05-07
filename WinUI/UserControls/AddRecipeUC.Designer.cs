@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.AddIngButton = new System.Windows.Forms.Button();
 			this.QuantityLabel = new System.Windows.Forms.Label();
 			this.IngNameLabel = new System.Windows.Forms.Label();
@@ -41,6 +42,8 @@
 			this.TempCharComboBox = new System.Windows.Forms.ComboBox();
 			this.DisplayRecipeTextBox = new System.Windows.Forms.TextBox();
 			this.ReadyButton = new System.Windows.Forms.Button();
+			this.DonWIngButton = new System.Windows.Forms.Button();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.SuspendLayout();
 			// 
 			// AddIngButton
@@ -162,7 +165,7 @@
 			this.DisplayRecipeTextBox.Location = new System.Drawing.Point(780, 0);
 			this.DisplayRecipeTextBox.Multiline = true;
 			this.DisplayRecipeTextBox.Name = "DisplayRecipeTextBox";
-			this.DisplayRecipeTextBox.Size = new System.Drawing.Size(291, 714);
+			this.DisplayRecipeTextBox.Size = new System.Drawing.Size(291, 672);
 			this.DisplayRecipeTextBox.TabIndex = 14;
 			// 
 			// ReadyButton
@@ -178,6 +181,26 @@
 			this.ReadyButton.UseVisualStyleBackColor = true;
 			this.ReadyButton.Click += new System.EventHandler(this.ReadyButton_Click);
 			// 
+			// DonWIngButton
+			// 
+			this.DonWIngButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
+			this.DonWIngButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.DonWIngButton.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Bold);
+			this.DonWIngButton.Location = new System.Drawing.Point(599, 214);
+			this.DonWIngButton.Name = "DonWIngButton";
+			this.DonWIngButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.DonWIngButton.Size = new System.Drawing.Size(175, 32);
+			this.DonWIngButton.TabIndex = 16;
+			this.DonWIngButton.Text = "Done w/ Ingredients";
+			this.DonWIngButton.UseVisualStyleBackColor = false;
+			this.DonWIngButton.Click += new System.EventHandler(this.DonWIngButton_Click);
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+			// 
 			// AddRecipeUC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,6 +208,7 @@
 			this.AutoScroll = true;
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
+			this.Controls.Add(this.DonWIngButton);
 			this.Controls.Add(this.ReadyButton);
 			this.Controls.Add(this.DisplayRecipeTextBox);
 			this.Controls.Add(this.TempCharComboBox);
@@ -199,7 +223,7 @@
 			this.Controls.Add(this.QuantityLabel);
 			this.Controls.Add(this.AddIngButton);
 			this.Name = "AddRecipeUC";
-			this.Size = new System.Drawing.Size(953, 714);
+			this.Size = new System.Drawing.Size(953, 672);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -219,5 +243,7 @@
 		private System.Windows.Forms.ComboBox TempCharComboBox;
 		private System.Windows.Forms.TextBox DisplayRecipeTextBox;
 		private System.Windows.Forms.Button ReadyButton;
+		private System.Windows.Forms.Button DonWIngButton;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 	}
 }

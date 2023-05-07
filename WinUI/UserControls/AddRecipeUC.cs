@@ -12,6 +12,8 @@ using TastyTableClassLibrary;
 using WinUI.UserControls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Button = System.Windows.Forms.Button;
+using TextBox = System.Windows.Forms.TextBox;
+using Microsoft.VisualBasic;
 
 namespace WinUI
 {
@@ -33,6 +35,7 @@ namespace WinUI
 			TempNumTextBox.Visible = false;
 			DisplayRecipeTextBox.Visible = false;
 			ReadyButton.Visible = false;
+			DonWIngButton.Visible = false;
 		}
 
 		int addIngrControl = 5;
@@ -70,6 +73,8 @@ namespace WinUI
 			newRecipe.TempNum = temp;
 			newRecipe.TempChar = TempCharComboBox.Text;
 			SqliteDataAccess.SaveRecipe(newRecipe);
+			int id = SqliteDataAccess.LoadRecipeID(newRecipe.Name).ID;
+			newRecipe.ID = id;
 		}
 
 		private void ReadyButton_Click(object sender, EventArgs e)
@@ -78,25 +83,40 @@ namespace WinUI
 			UnitLabel.Visible = true;
 			IngNameLabel.Visible = true;
 			AddIngButton.Visible = true;
+			DonWIngButton.Visible = true;
 			SaveRecipeName();
-			string name = newRecipe.Name;
-
-			List<Recipe> recDisplay = SqliteDataAccess.LoadRecipe();
-			int id = SqliteDataAccess.LoadRecipeID(name).ID;
-			DisplayRecipeTextBox.Text = id.ToString();
-
-
-			//foreach (Recipe rec in recDisplay) { DisplayRecipeTextBox.Text = rec.Name; }
 		}
 
-        //public int GetRecipeID()
-        //{
-			//return newRecipe.ID;
-        //}
 
 		internal static int PassRecipeID()
 		{
             return newRecipe.ID;
         }
+		private void DonWIngButton_Click(object sender, EventArgs e)
+		{
+			
+			AddIngButton.Visible = false;
+			string message = "How many steps are in this recipe?";
+			string title = "Recipe Instructions";
+
+			string numofInstrS = Interaction.InputBox(message, title);
+
+			Int32.TryParse(numofInstrS, out int numofInstrN);
+
+			for (int i = 1; i < numofInstrN + 1; i++)
+			{
+				Instruction inst = new Instruction();
+				inst.StepNum = i;
+				message = "Step " + i;
+				title = "Recipe Steps";
+				inst.Description = Interaction.InputBox(message, title);
+				inst.RecID = newRecipe.ID;
+
+				SqliteDataAccess.SaveInstructions(inst);
+			}
+
+		}
+
+		
 	}
 }

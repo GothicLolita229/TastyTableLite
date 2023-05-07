@@ -46,7 +46,15 @@ namespace TastyTableClassLibrary
 			}
 		}
 
-        public static Ingredient LoadIngredientID(string Name)
+		public static void SaveInstructions(Instruction inst)
+		{
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				cnn.Execute("insert into Instruction (StepNum, Description, RecID) values (@StepNum, @Description, @RecID)", inst);
+			}
+		}
+
+		public static Ingredient LoadIngredientID(string Name)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {

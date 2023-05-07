@@ -313,6 +313,7 @@
 			// 
 			// aboutUCF
 			// 
+			this.aboutUCF.AutoScroll = true;
 			this.aboutUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
 			this.aboutUCF.Location = new System.Drawing.Point(0, 170);
 			this.aboutUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -325,10 +326,10 @@
 			this.addRecipeUCF.AutoScroll = true;
 			this.addRecipeUCF.AutoSize = true;
 			this.addRecipeUCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(204)))));
-			this.addRecipeUCF.Location = new System.Drawing.Point(0, 170);
+			this.addRecipeUCF.Location = new System.Drawing.Point(0, 169);
 			this.addRecipeUCF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.addRecipeUCF.Name = "addRecipeUCF";
-			this.addRecipeUCF.Size = new System.Drawing.Size(1492, 710);
+			this.addRecipeUCF.Size = new System.Drawing.Size(1456, 711);
 			this.addRecipeUCF.TabIndex = 7;
 			// 
 			// recipeBookUCF

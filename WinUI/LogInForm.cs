@@ -74,6 +74,7 @@ namespace WinUI
 		//      private RegistrationForm form = new RegistrationForm();
 		private void RegisterLabel_Click(object sender, EventArgs e)
 		{
+            //Want to pull up the registerform but couldn't figure it out. Moving on since that can be done other ways
 
 		}
 	}
