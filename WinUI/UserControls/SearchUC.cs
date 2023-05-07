@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TastyTableClassLibrary;
 
 namespace WinUI
 {
@@ -20,7 +21,13 @@ namespace WinUI
 		private void SearchButton_Click(object sender, EventArgs e)
 		{
 			//Search from database using text
-			DisplayTextBox.Text = string.Empty;
+			List<string> RecipePulls = new List<string>();
+			string search = "Seaweed";
+			RecipePulls = SqliteDataAccess.PullRecipeInfo(search);
+			foreach (string item in RecipePulls)
+			{
+				DisplayTextBox.Text = item;
+			}
 		}
 	}
 }
