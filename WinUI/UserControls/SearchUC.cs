@@ -22,7 +22,7 @@ namespace WinUI
 		{
 			//Search from database using text
 			List<string> RecipePulls = new List<string>();
-			string search = "Seaweed";
+			string search = "Hot Dogs";
 			RecipePulls = SqliteDataAccess.PullRecipeInfo(search);
 			foreach (string item in RecipePulls)
 			{
