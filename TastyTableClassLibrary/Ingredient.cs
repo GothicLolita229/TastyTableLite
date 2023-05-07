@@ -10,8 +10,8 @@ namespace TastyTableClassLibrary
 	{
 		public Ingredient() { }
 
-		public int ID { get; set; }
-		public string Name { get; set; }
+		public int IngID { get; set; }
+		public string IngName { get; set; }
 		public double Quantity { get; set; }
 		public string Unit { get; set; }
 	}

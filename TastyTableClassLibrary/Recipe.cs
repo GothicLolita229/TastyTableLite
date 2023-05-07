@@ -10,8 +10,8 @@ namespace TastyTableClassLibrary
 	{
 		public Recipe() { }
 
-		public int ID { get; set; }
-		public string Name { get; set; }
+		public int RecID { get; set; }
+		public string RecName { get; set; }
 		public int TempNum { get; set; }
 		public string TempChar { get; set; }
 

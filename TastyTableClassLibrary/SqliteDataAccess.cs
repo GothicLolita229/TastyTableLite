@@ -42,14 +42,14 @@ namespace TastyTableClassLibrary
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				cnn.Execute("insert into Ingredient (Name, Quantity, Unit) values (@Name, @Quantity, @Unit)", ingr);
+				cnn.Execute("insert into Ingredient (IngName, Quantity, Unit) values (@IngName, @Quantity, @Unit)", ingr);
 			}
 		}
 		public static int SaveIngrReturnID(Ingredient ingr)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				return cnn.QuerySingle<int>("insert into Ingredient (Name, Quantity, Unit) values (@Name, @Quantity, @Unit) RETURNING ID", ingr);
+				return cnn.QuerySingle<int>("insert into Ingredient (IngName, Quantity, Unit) values (@IngName, @Quantity, @Unit) RETURNING IngID", ingr);
 			}
 		}
 		public static void SaveInstructions(Instruction inst)
@@ -72,7 +72,7 @@ namespace TastyTableClassLibrary
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 var parameters = new { Name = Name };
-                var output = cnn.QuerySingle<Ingredient>("SELECT * from Ingredient WHERE Name = @Name", parameters);
+                var output = cnn.QuerySingle<Ingredient>("SELECT * from Ingredient WHERE IngName = @IngName", parameters);
                 return output;
             }
         }
@@ -91,7 +91,7 @@ namespace TastyTableClassLibrary
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
 				var parameters = new { Name = Name };
-				var output = cnn.QuerySingle<Recipe>("SELECT * from Recipe WHERE Name = @Name", parameters);
+				var output = cnn.QuerySingle<Recipe>("SELECT * from Recipe WHERE RecName = @RecName", parameters);
 				return output;
 			}
 		}
@@ -99,7 +99,7 @@ namespace TastyTableClassLibrary
 		//{
 		//          using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString())) 
 		//	{
-		//		cnn.Execute("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar)", recipe);
+		//		cnn.Execute("insert into Recipe (RecName, TempNum, TempChar) values (@RecName, @TempNum, @TempChar)", recipe);
 		//	}
 		//      }
 
@@ -107,7 +107,7 @@ namespace TastyTableClassLibrary
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				return cnn.QuerySingle<int>("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar) RETURNING ID", recipe);
+				return cnn.QuerySingle<int>("insert into Recipe (RecName, TempNum, TempChar) values (@RecName, @TempNum, @TempChar) RETURNING RecID", recipe);
 			}
 		}
 

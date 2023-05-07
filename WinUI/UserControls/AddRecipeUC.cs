@@ -68,14 +68,14 @@ namespace WinUI
 		public void SaveRecipeName()
 		{
 			DisplayRecipeTextBox.Visible = true;
-			newRecipe.Name = RecipeNameTextBox.Text;
+			newRecipe.RecName = RecipeNameTextBox.Text;
 			Int32.TryParse(TempNumTextBox.Text, out int temp);
 			newRecipe.TempNum = temp;
 			newRecipe.TempChar = TempCharComboBox.Text;
 			//SqliteDataAccess.SaveRecipe(newRecipe);
 			//int id = SqliteDataAccess.LoadRecipeID(newRecipe.Name).ID;
 			// = id;
-			newRecipe.ID = SqliteDataAccess.SaveRecipe(newRecipe);
+			newRecipe.RecID = SqliteDataAccess.SaveRecipe(newRecipe);
 		}
 
 		private void ReadyButton_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace WinUI
 
 		internal static int PassRecipeID()
 		{
-            return newRecipe.ID;
+            return newRecipe.RecID;
         }
 		private void DonWIngButton_Click(object sender, EventArgs e)
 		{
@@ -110,7 +110,7 @@ namespace WinUI
 				message = "Step " + i;
 				title = "Recipe Steps";
 				inst.Description = Interaction.InputBox(message, title);
-				inst.RecID = newRecipe.ID;
+				inst.RecID = newRecipe.RecID;
 
 				SqliteDataAccess.SaveInstructions(inst);
 			}

@@ -10,7 +10,7 @@ namespace TastyTableClassLibrary
 	{
 		public Instruction() { }
 
-		public int ID { get; set; } //An autoincremented unique identifier
+		public int InstID { get; set; } //An autoincremented unique identifier
 		public int StepNum { get; set; } //Each step is numbered like 1, 2, 3
 		public string Description { get; set; }
 

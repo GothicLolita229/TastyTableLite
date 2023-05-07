@@ -32,7 +32,7 @@ namespace WinUI.UserControls
 
 			RecipeBridge recipeBridge = new RecipeBridge();
 
-			ing.Name = name;
+			ing.IngName = name;
 			ing.Quantity = quantity;
 			ing.Unit = unit;
 
