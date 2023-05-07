@@ -36,11 +36,12 @@ namespace WinUI.UserControls
 			ing.Quantity = quantity;
 			ing.Unit = unit;
 
-			SqliteDataAccess.SaveIngredients(ing);
+			//SqliteDataAccess.SaveIngredients(ing);
+			ingredientID = SqliteDataAccess.SaveIngrReturnID(ing);
 			MessageBox.Show("Saved!"); //Comment out later
 			IngredientsForRecipe.Add(ing);
 			recipeID = AddRecipeUC.PassRecipeID();
-			ingredientID = SqliteDataAccess.LoadIngredientID(ing.Name).ID;
+			//ingredientID = SqliteDataAccess.LoadIngredientID(ing.Name).ID;
 			//MessageBox.Show(recipeID.ToString() + ingredientID.ToString());
 			recipeBridge.RecID = recipeID;
 			recipeBridge.IngID = ingredientID;

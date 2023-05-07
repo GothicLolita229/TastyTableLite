@@ -46,6 +46,14 @@ namespace TastyTableClassLibrary
 			}
 		}
 
+		public static int SaveIngrReturnID(Ingredient ingr)
+		{
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				return cnn.QuerySingle<int>("insert into Ingredient (Name, Quantity, Unit) values (@Name, @Quantity, @Unit) RETURNING ID", ingr);
+			}
+		}
+
 		public static void SaveInstructions(Instruction inst)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -53,6 +61,14 @@ namespace TastyTableClassLibrary
 				cnn.Execute("insert into Instruction (StepNum, Description, RecID) values (@StepNum, @Description, @RecID)", inst);
 			}
 		}
+
+		//public static int SaveInstructions(Instruction inst)
+		//{
+		//	using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+		//	{
+		//		return cnn.QuerySingle<int>("insert into Instruction (StepNum, Description, RecID) values (@StepNum, @Description, @RecID) RETURNING ID", inst);
+		//	}
+		//}
 
 		public static Ingredient LoadIngredientID(string Name)
         {
@@ -82,15 +98,23 @@ namespace TastyTableClassLibrary
 				return output;
 			}
 		}
-		public static void SaveRecipe(Recipe recipe) 
-		{
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString())) 
-			{
-				cnn.Execute("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar)", recipe);
-			}
-        }
+		//public static void SaveRecipe(Recipe recipe) 
+		//{
+		//          using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString())) 
+		//	{
+		//		cnn.Execute("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar)", recipe);
+		//	}
+		//      }
 
-        public static void SavetoBridge(RecipeBridge recipeBridge)
+		public static int SaveRecipe(Recipe recipe)
+		{
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				return cnn.QuerySingle<int>("insert into Recipe (Name, TempNum, TempChar) values (@Name, @TempNum, @TempChar) RETURNING ID", recipe);
+			}
+		}
+
+		public static void SavetoBridge(RecipeBridge recipeBridge)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {

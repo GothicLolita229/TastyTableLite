@@ -72,9 +72,10 @@ namespace WinUI
 			Int32.TryParse(TempNumTextBox.Text, out int temp);
 			newRecipe.TempNum = temp;
 			newRecipe.TempChar = TempCharComboBox.Text;
-			SqliteDataAccess.SaveRecipe(newRecipe);
-			int id = SqliteDataAccess.LoadRecipeID(newRecipe.Name).ID;
-			newRecipe.ID = id;
+			//SqliteDataAccess.SaveRecipe(newRecipe);
+			//int id = SqliteDataAccess.LoadRecipeID(newRecipe.Name).ID;
+			// = id;
+			newRecipe.ID = SqliteDataAccess.SaveRecipe(newRecipe);
 		}
 
 		private void ReadyButton_Click(object sender, EventArgs e)
