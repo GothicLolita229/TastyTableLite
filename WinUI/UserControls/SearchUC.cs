@@ -16,5 +16,11 @@ namespace WinUI
 		{
 			InitializeComponent();
 		}
+
+		private void SearchButton_Click(object sender, EventArgs e)
+		{
+			//Search from database using text
+			DisplayTextBox.Text = string.Empty;
+		}
 	}
 }
