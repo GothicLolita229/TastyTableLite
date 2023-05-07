@@ -17,7 +17,7 @@ namespace WinUI
 {
 	public partial class AddRecipeUC : UserControl
 	{
-		Recipe newRecipe = new Recipe();
+		public static Recipe newRecipe = new Recipe();
 		public AddRecipeUC()
 		{
 			InitializeComponent();
@@ -82,9 +82,21 @@ namespace WinUI
 			string name = newRecipe.Name;
 
 			List<Recipe> recDisplay = SqliteDataAccess.LoadRecipe();
-			//DisplayRecipeTextBox.Text = SqliteDataAccess.LoadRecipeID(name);
+			int id = SqliteDataAccess.LoadRecipeID(name).ID;
+			DisplayRecipeTextBox.Text = id.ToString();
 
-			foreach (Recipe rec in recDisplay) { DisplayRecipeTextBox.Text = rec.Name; }
+
+			//foreach (Recipe rec in recDisplay) { DisplayRecipeTextBox.Text = rec.Name; }
 		}
+
+        //public int GetRecipeID()
+        //{
+			//return newRecipe.ID;
+        //}
+
+		internal static int GetRecipe()
+		{
+            return newRecipe.ID;
+        }
 	}
 }

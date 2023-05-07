@@ -46,6 +46,16 @@ namespace TastyTableClassLibrary
 			}
 		}
 
+        public static Ingredient LoadIngredientID(string Name)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { Name = Name };
+                var output = cnn.QuerySingle<Ingredient>("SELECT * from Ingredient WHERE Name = @Name", parameters);
+                return output;
+            }
+        }
+
         public static List<Recipe> LoadRecipe()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -60,7 +70,7 @@ namespace TastyTableClassLibrary
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
 				var parameters = new { Name = Name };
-				var output = cnn.QuerySingle<Recipe>("SELECT ID from Recipe WHERE Name = @Name", parameters);
+				var output = cnn.QuerySingle<Recipe>("SELECT * from Recipe WHERE Name = @Name", parameters);
 				return output;
 			}
 		}
@@ -72,9 +82,18 @@ namespace TastyTableClassLibrary
 			}
         }
 
+        public static void SavetoBridge(RecipeBridge recipeBridge)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert into RecipeIngr (RecID, IngID) values (@RecID, @IngID)", recipeBridge);
+            }
+        }
+
         private static string LoadConnectionString(string id = "Default")
 		{
 			return ConfigurationManager.ConnectionStrings[id].ConnectionString;
 		}
+
 	}
 }
