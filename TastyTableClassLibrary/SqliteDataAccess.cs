@@ -53,6 +53,15 @@ namespace TastyTableClassLibrary
 				cnn.Execute("insert into Instruction (StepNum, Description, RecID) values (@StepNum, @Description, @RecID)", inst);
 			}
 		}
+
+		public static List<Instruction> LoadInstructions(int RecID)
+		{
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				var parameters = new { RecID = RecID };
+				return cnn.Query<Instruction>("SELECT * from Instruction WHERE RecID = @RecID", parameters).ToList();
+			}
+		}
 		//public static int SaveInstructions(Instruction inst)
 		//{
 		//	using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -61,12 +70,12 @@ namespace TastyTableClassLibrary
 		//	}
 		//}
 
-		public static Ingredient LoadIngredientID(string Name)
+		public static Ingredient LoadIngredientID(int IngID)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var parameters = new { Name = Name };
-                var output = cnn.QuerySingle<Ingredient>("SELECT * from Ingredient WHERE IngName = @IngName", parameters);
+                var parameters = new { IngID = IngID };
+                var output = cnn.QuerySingle<Ingredient>("SELECT * from Ingredient WHERE IngID = @IngID", parameters);
                 return output;
             }
         }
@@ -113,14 +122,16 @@ namespace TastyTableClassLibrary
 				return cnn.QuerySingle<int>("SELECT DISTINCT RecID from RecipeIngr WHERE IngID = @IngID", parameters);
 			}
 		}
-		public static List<Ingredient> LoadIngFromBridge(int RecID)
+		public static List<int> LoadIngFromBridge(int RecID)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
 				var parameters = new { RecID = RecID };
-				return cnn.Query<Ingredient>("SELECT IngID from RecipeIngr WHERE RecID = @RecID", parameters).ToList();
+				return cnn.Query<int>("SELECT IngID from RecipeIngr WHERE RecID = @RecID", parameters).ToList();
 			}
 		}
+
+
 
 
 		//public static List<string> PullRecipe(string RecName)

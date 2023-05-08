@@ -48,15 +48,16 @@
 			// DisplayTextBox
 			// 
 			this.DisplayTextBox.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.DisplayTextBox.Location = new System.Drawing.Point(14, 337);
+			this.DisplayTextBox.Location = new System.Drawing.Point(12, 164);
 			this.DisplayTextBox.Multiline = true;
 			this.DisplayTextBox.Name = "DisplayTextBox";
-			this.DisplayTextBox.Size = new System.Drawing.Size(976, 386);
+			this.DisplayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.DisplayTextBox.Size = new System.Drawing.Size(976, 448);
 			this.DisplayTextBox.TabIndex = 4;
 			// 
 			// SearchTextBox
 			// 
-			this.SearchTextBox.Location = new System.Drawing.Point(240, 174);
+			this.SearchTextBox.Location = new System.Drawing.Point(225, 89);
 			this.SearchTextBox.Name = "SearchTextBox";
 			this.SearchTextBox.Size = new System.Drawing.Size(152, 22);
 			this.SearchTextBox.TabIndex = 5;
@@ -65,7 +66,7 @@
 			// 
 			this.SearchBoxLabel.AutoSize = true;
 			this.SearchBoxLabel.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.SearchBoxLabel.Location = new System.Drawing.Point(64, 168);
+			this.SearchBoxLabel.Location = new System.Drawing.Point(63, 83);
 			this.SearchBoxLabel.Name = "SearchBoxLabel";
 			this.SearchBoxLabel.Size = new System.Drawing.Size(136, 30);
 			this.SearchBoxLabel.TabIndex = 6;
@@ -74,7 +75,7 @@
 			// SearchButton
 			// 
 			this.SearchButton.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.SearchButton.Location = new System.Drawing.Point(420, 167);
+			this.SearchButton.Location = new System.Drawing.Point(420, 79);
 			this.SearchButton.Name = "SearchButton";
 			this.SearchButton.Size = new System.Drawing.Size(106, 39);
 			this.SearchButton.TabIndex = 7;
