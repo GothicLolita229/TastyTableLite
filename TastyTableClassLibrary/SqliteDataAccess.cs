@@ -30,12 +30,13 @@ namespace TastyTableClassLibrary
 			}
 		}
 
-		public static List<Ingredient> LoadIngredients()
+		public static List<Ingredient> LoadIngredients(string IngName)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				var output = cnn.Query<Ingredient>("SELECT * from Ingredient", new DynamicParameters());
-				return output.ToList();
+				var parameters = new {IngName = IngName };
+				//return cnn.Query<Ingredient>("SELECT * from Ingredient WHERE IngName LIKE \"%@IngName%\"", parameters).ToList();
+				return cnn.Query<Ingredient>("SELECT * from Ingredient WHERE IngName LIKE '%' || @IngName || '%'", parameters).ToList(); 
 			}
 		}
 		public static void SaveIngredients(Ingredient ingr)
@@ -86,23 +87,15 @@ namespace TastyTableClassLibrary
             }
         }
 
-		public static Recipe LoadRecipeID(string Name)
+		public static Recipe LoadRecipeID(int RecID)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
-				var parameters = new { Name = Name };
-				var output = cnn.QuerySingle<Recipe>("SELECT * from Recipe WHERE RecName = @RecName", parameters);
-				return output;
+				var parameters = new { RecID = RecID };
+				return cnn.QuerySingle<Recipe>("SELECT * from Recipe WHERE RecID = @RecID", parameters);
 			}
 		}
-		//public static void SaveRecipe(Recipe recipe) 
-		//{
-		//          using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString())) 
-		//	{
-		//		cnn.Execute("insert into Recipe (RecName, TempNum, TempChar) values (@RecName, @TempNum, @TempChar)", recipe);
-		//	}
-		//      }
-
+		
 		public static int SaveRecipe(Recipe recipe)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -119,18 +112,27 @@ namespace TastyTableClassLibrary
             }
         }
 
-        public static List<string> PullRecipeInfo(string RecName)
-        {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                var parameters = new { RecName = RecName };
-                return cnn.Query<string>("SELECT Recipe.RecName, Recipe.TempNum, Recipe.TempChar, Instruction.StepNum, Instruction.Description, Ingredient.IngName, Ingredient.Quantity," +
-                    " Ingredient.Unit FROM Recipe JOIN Instruction ON Recipe.RecID = Instruction.RecID JOIN RecipeIngr ON Recipe.RecID = RecipeIngr.RecID JOIN Ingredient " +
-                    "ON RecipeIngr.IngID = Ingredient.IngID WHERE Recipe.RecName = @RecName", parameters).ToList();
-            }
-        }
+		public static int LoadRecFromBridge(int IngID)
+		{
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				var parameters = new { IngID = IngID };
+				return cnn.QuerySingle<int>("SELECT DISTINCT RecID from RecipeIngr WHERE IngID = @IngID", parameters);
+			}
+		}
 
-        private static string LoadConnectionString(string id = "Default")
+		//public static List<string> PullRecipe(string RecName)
+		//{
+		//    using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+		//    {
+		//        var parameters = new { RecName = RecName };
+		//        return cnn.Query<string>("SELECT Recipe.RecName, Recipe.TempNum, Recipe.TempChar, Instruction.StepNum, Instruction.Description, Ingredient.IngName, Ingredient.Quantity," +
+		//            " Ingredient.Unit FROM Recipe JOIN Instruction ON Recipe.RecID = Instruction.RecID JOIN RecipeIngr ON Recipe.RecID = RecipeIngr.RecID JOIN Ingredient " +
+		//            "ON RecipeIngr.IngID = Ingredient.IngID WHERE Recipe.RecName = @RecName", parameters).ToList();
+		//    }
+		//}
+
+		private static string LoadConnectionString(string id = "Default")
 		{
 			return ConfigurationManager.ConnectionStrings[id].ConnectionString;
 		}

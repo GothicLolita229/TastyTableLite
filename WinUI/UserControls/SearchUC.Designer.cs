@@ -67,7 +67,7 @@
 			this.SearchBoxLabel.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.SearchBoxLabel.Location = new System.Drawing.Point(64, 168);
 			this.SearchBoxLabel.Name = "SearchBoxLabel";
-			this.SearchBoxLabel.Size = new System.Drawing.Size(170, 38);
+			this.SearchBoxLabel.Size = new System.Drawing.Size(136, 30);
 			this.SearchBoxLabel.TabIndex = 6;
 			this.SearchBoxLabel.Text = "Enter a word:";
 			// 
@@ -76,7 +76,7 @@
 			this.SearchButton.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.SearchButton.Location = new System.Drawing.Point(420, 167);
 			this.SearchButton.Name = "SearchButton";
-			this.SearchButton.Size = new System.Drawing.Size(83, 39);
+			this.SearchButton.Size = new System.Drawing.Size(106, 39);
 			this.SearchButton.TabIndex = 7;
 			this.SearchButton.Text = "Search";
 			this.SearchButton.UseVisualStyleBackColor = true;
