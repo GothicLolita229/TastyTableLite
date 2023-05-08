@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TastyTableClassLibrary;
 using System.Linq;
+using System.Net.NetworkInformation;
 
 namespace WinUI
 {
@@ -43,7 +44,6 @@ namespace WinUI
 			foreach (Ingredient item in ingSearch)
 			{
 				ingIDs.Add(item.IngID);
-				DisplayTextBox.Text += item.Quantity + " " + item.Unit + " " + item.IngName + " ";
 			}
 
 			// Searches based on ID
@@ -54,8 +54,24 @@ namespace WinUI
 			// Makes a unique list of all recipes without duplicates
 			List<int> uniqueRecBrid = recBrid.Distinct().ToList();
 
+
 			// Pull the Recipe name, temp, and C or F based on uniqueRecBrid
 
+			foreach (int recID in uniqueRecBrid)
+			{
+				Recipe recipe = SqliteDataAccess.LoadRecipeOnID(recID);
+				DisplayTextBox.Text += recipe.RecName + " \r\n" + string.Format("{0}\u00B0", recipe.TempNum) + recipe.TempChar + " \r\n";
+				List<Ingredient> ings = SqliteDataAccess.LoadIngFromBridge(recipe.RecID);
+				foreach (Ingredient ing in ings)
+				{
+					DisplayTextBox.Text += ing.Quantity + " " + ing.Unit + " " + ing.IngName + " \r\n";
+				}
+				//	foreach(Instruction inst in insts)
+				//	{
+						//DisplayTextBox.Text += inst.StepNum + " " + inst.Description + " \r\n";
+				//	}
+			}
+			//DisplayTextBox.Text += item.Quantity + " " + item.Unit + " " + item.IngName + " ";
 			// Pull ingredients and intructions and attach them to each recipe
 
 			// Display them

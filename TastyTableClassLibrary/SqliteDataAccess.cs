@@ -39,13 +39,6 @@ namespace TastyTableClassLibrary
 				return cnn.Query<Ingredient>("SELECT * from Ingredient WHERE IngName LIKE '%' || @IngName || '%'", parameters).ToList(); 
 			}
 		}
-		public static void SaveIngredients(Ingredient ingr)
-		{
-			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-			{
-				cnn.Execute("insert into Ingredient (IngName, Quantity, Unit) values (@IngName, @Quantity, @Unit)", ingr);
-			}
-		}
 		public static int SaveIngrReturnID(Ingredient ingr)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -87,7 +80,7 @@ namespace TastyTableClassLibrary
             }
         }
 
-		public static Recipe LoadRecipeID(int RecID)
+		public static Recipe LoadRecipeOnID(int RecID)
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
 			{
@@ -120,6 +113,15 @@ namespace TastyTableClassLibrary
 				return cnn.QuerySingle<int>("SELECT DISTINCT RecID from RecipeIngr WHERE IngID = @IngID", parameters);
 			}
 		}
+		public static List<Ingredient> LoadIngFromBridge(int RecID)
+		{
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				var parameters = new { RecID = RecID };
+				return cnn.Query<Ingredient>("SELECT IngID from RecipeIngr WHERE RecID = @RecID", parameters).ToList();
+			}
+		}
+
 
 		//public static List<string> PullRecipe(string RecName)
 		//{
